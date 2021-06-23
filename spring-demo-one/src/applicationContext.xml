@@ -20,6 +20,8 @@
     	
     <bean id="myCricketCoach"
     	class="com.dragontalker.springdemo.CricketCoach">
+    	<property name="emailAddress" value="dragontalker@email.com" />
+    	<property name="team" value="TeamDragon" />
     	<property name="fortuneService" ref="myFortune" />	
     </bean>
 </beans>
