@@ -11,15 +11,17 @@ public class CricketCoach implements Coach {
 	}
 	
 	public void setEmailAddress(String emailAddress) {
+		System.out.println("CricketCoach: emailAddress setter triggered");
 		this.emailAddress = emailAddress;
 	}
 
 	public void setTeam(String team) {
+		System.out.println("CricketCoach: team setter triggered");
 		this.team = team;
 	}
 
 	public void setFortuneService(FortuneService fortuneService) {
-		System.out.println("CricketCoach: setter method triggered");
+		System.out.println("CricketCoach: fortuneService setter triggered");
 		this.fortuneService = fortuneService;
 	}
 	
