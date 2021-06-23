@@ -17,6 +17,11 @@
     <!-- Define the dependency -->
     <bean id="myFortune" 
     	class="com.dragontalker.springdemo.HappyFortuneService" />
+    	
+    <bean id="myCricketCoach"
+    	class="com.dragontalker.springdemo.CricketCoach">
+    	<property name="fortuneService" ref="myFortune" />	
+    </bean>
 </beans>
 
 
