@@ -4,6 +4,10 @@ public class CricketCoach implements Coach {
 	
 	private FortuneService fortuneService;
 
+	public CricketCoach() {
+		System.out.println("CricketCoach: in-to the constructor");
+	}
+	
 	public void setFortuneService(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
