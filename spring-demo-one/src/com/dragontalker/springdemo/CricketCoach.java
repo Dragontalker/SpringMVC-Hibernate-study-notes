@@ -2,12 +2,22 @@ package com.dragontalker.springdemo;
 
 public class CricketCoach implements Coach {
 	
+	private String emailAddress;
+	private String team;
 	private FortuneService fortuneService;
-
+	
 	public CricketCoach() {
 		System.out.println("CricketCoach: constructor triggered");
 	}
 	
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
+	}
+
 	public void setFortuneService(FortuneService fortuneService) {
 		System.out.println("CricketCoach: setter method triggered");
 		this.fortuneService = fortuneService;
@@ -22,4 +32,6 @@ public class CricketCoach implements Coach {
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
+	
+	
 }
