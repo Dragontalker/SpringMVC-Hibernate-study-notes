@@ -8,6 +8,9 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your beans here -->
+    <bean id="myCoach"
+    	class="com.dragontalker.springdemo.TrachCoach">
+    </bean>
     
 </beans>
 
