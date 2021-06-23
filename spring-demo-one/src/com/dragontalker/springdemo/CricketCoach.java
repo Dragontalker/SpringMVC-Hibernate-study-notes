@@ -5,10 +5,11 @@ public class CricketCoach implements Coach {
 	private FortuneService fortuneService;
 
 	public CricketCoach() {
-		System.out.println("CricketCoach: in-to the constructor");
+		System.out.println("CricketCoach: constructor triggered");
 	}
 	
 	public void setFortuneService(FortuneService fortuneService) {
+		System.out.println("CricketCoach: setter method triggered");
 		this.fortuneService = fortuneService;
 	}
 	
