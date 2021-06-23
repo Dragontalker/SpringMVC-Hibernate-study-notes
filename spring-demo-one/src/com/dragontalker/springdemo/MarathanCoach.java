@@ -7,4 +7,10 @@ public class MarathanCoach implements Coach{
 		return "Do a 1/4 Marathan now!";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
