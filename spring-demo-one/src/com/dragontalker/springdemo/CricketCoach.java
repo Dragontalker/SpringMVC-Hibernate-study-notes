@@ -32,6 +32,9 @@ public class CricketCoach implements Coach {
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "CricketCoach [emailAddress=" + emailAddress + ", team=" + team + "]";
+	}
 }
