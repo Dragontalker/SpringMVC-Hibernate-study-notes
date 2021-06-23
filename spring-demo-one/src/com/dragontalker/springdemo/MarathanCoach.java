@@ -1,6 +1,12 @@
 package com.dragontalker.springdemo;
 
 public class MarathanCoach implements Coach{
+	
+	private FortuneService fortuneService;
+	
+	public MarathanCoach(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
 
 	@Override
 	public String getDailyWorkout() {
@@ -9,8 +15,7 @@ public class MarathanCoach implements Coach{
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+		return fortuneService.getFortune();
 	}
 
 }
