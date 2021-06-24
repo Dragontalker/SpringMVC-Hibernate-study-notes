@@ -11,9 +11,9 @@ public class BeanScopeDemoApp {
 				new ClassPathXmlApplicationContext("beanScope-applicationContext.xml");
 		
 		// retrieve bean from spring container
+		Coach theCoach = context.getBean("myCoach", Coach.class);
 		
-		
-
+		Coach alphaCoach = context.getBean("myCoach", Coach.class);
 	}
 
 }
