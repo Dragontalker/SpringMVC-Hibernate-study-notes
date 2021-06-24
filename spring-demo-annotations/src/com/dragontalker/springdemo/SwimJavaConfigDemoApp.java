@@ -2,6 +2,8 @@ package com.dragontalker.springdemo;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.dragontalker.springdemo.config.SportConfig;
+
 public class SwimJavaConfigDemoApp {
 
 	public static void main(String[] args) {

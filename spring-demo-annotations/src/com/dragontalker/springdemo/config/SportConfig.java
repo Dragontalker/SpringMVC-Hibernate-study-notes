@@ -1,11 +1,16 @@
-package com.dragontalker.springdemo;
+package com.dragontalker.springdemo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
+import com.dragontalker.springdemo.Coach;
+import com.dragontalker.springdemo.FortuneService;
+import com.dragontalker.springdemo.SadFortuneService;
+import com.dragontalker.springdemo.SwimCoach;
+
 @Configuration
-@PropertySource("classpath:sprot.properties")
+@PropertySource("classpath:sport.properties")
 public class SportConfig {
 	
 	// define bean for our sad fortune service
