@@ -9,7 +9,7 @@
 	
     <!-- Define your beans here -->
     <bean id="myCoach" 
-    	class="com.dragontalker.springdemo.BaseballCoach"
+    	class="com.dragontalker.springdemo.TrackCoach"
     	init-method="doMyStartupStuff"
     	destroy-method="doMyCleanupStuff">
     	<!-- Set up constructor injection -->
