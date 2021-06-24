@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 	
 	private FortuneService fortuneService;
-	
+
 	@Autowired
-	public TennisCoach(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
+	public TennisCoach(FortuneService thefortuneService) {
+		this.fortuneService = thefortuneService;
 	}
 
 	@Override
