@@ -25,8 +25,11 @@
     	class="com.dragontalker.springdemo.CricketCoach">
     	<property name="emailAddress" value="${foo.email}" />
     	<property name="team" value="${foo.team}" />
-    	<property name="fortuneService" ref="myFortune" />	
+    	<property name="fortuneService" ref="randomFortuneService" />	
     </bean>
+    
+    <bean id="randomFortuneService" 
+    	class="com.dragontalker.springdemo.RandomFortuneService"/>
 </beans>
 
 
