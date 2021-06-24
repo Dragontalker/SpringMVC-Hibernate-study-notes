@@ -1,12 +1,10 @@
 package com.dragontalker.springdemo;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-//@ComponentScan("com.dragontalker.springdemo")
 @PropertySource("classpath:sprot.properties")
 public class SportConfig {
 	
