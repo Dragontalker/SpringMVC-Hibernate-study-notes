@@ -20,7 +20,11 @@ public class RandomFortuneService implements FortuneService {
 	@Override
 	public String getFortune() {
 		//pick a random string from the array
-		return null;
+		int index = myRandom.nextInt(data.length);
+		
+		String theFortune = data[index];
+		
+		return theFortune;
 	}
 
 }
