@@ -17,5 +17,10 @@ public class TennisCoach implements Coach {
 	public String getDailyWorkout() {
 		return "Practice your backhand volley";
 	}
+
+	@Override
+	public String getDailyFortune() {
+		return fortuneService.getFortune();
+	}
 	
 }
