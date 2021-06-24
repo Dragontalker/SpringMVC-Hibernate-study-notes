@@ -1,5 +1,8 @@
 package com.dragontalker.springdemo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class DatabaseFortuneService implements FortuneService {
 
 	@Override
