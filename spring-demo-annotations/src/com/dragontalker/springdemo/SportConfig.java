@@ -15,5 +15,9 @@ public class SportConfig {
 	}
 	
 	// define bean for our swim coach AND inject dependency
+	@Bean
+	public Coach swimCoach() {
+		return new SwimCoach(sadFortuneService());
+	}
 	
 }
