@@ -11,7 +11,9 @@ public class AnnotationBeanScopeDemoApp {
 			 new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// retrieve bean from spring container
+		Coach theCoach = context.getBean("tennisCoach", Coach.class);
 		
+		Coach alphaCoach = context.getBean("tennisCoach", Coach.class);
 
 	}
 
