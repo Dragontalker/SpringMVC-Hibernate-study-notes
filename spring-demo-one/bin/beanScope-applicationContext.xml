@@ -9,7 +9,8 @@
 	
     <!-- Define your beans here -->
     <bean id="myCoach" 
-    	class="com.dragontalker.springdemo.BaseballCoach">
+    	class="com.dragontalker.springdemo.BaseballCoach"
+    	scope="prototype">
     	<!-- Set up constructor injection -->
     	<constructor-arg ref="myFortune" />
     </bean>
