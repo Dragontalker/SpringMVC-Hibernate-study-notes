@@ -20,4 +20,7 @@ public class TrackCoach implements Coach {
 		return fortuneService.getFortune();
 	}
 
+	// add an init method
+	
+	// add a destroy method
 }
