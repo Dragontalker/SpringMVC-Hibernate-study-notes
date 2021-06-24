@@ -33,5 +33,9 @@ public class SwimCoach implements Coach {
 	public String getEmail() {
 		return email;
 	}
+	
+	public String getTeam() {
+		return team;
+	}
 
 }
