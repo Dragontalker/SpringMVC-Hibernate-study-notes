@@ -12,7 +12,7 @@
 		
 		<br><br>
 		
-		Country: {$student.country}
+		Country: ${ student.country }
 		
 	</body>
 
