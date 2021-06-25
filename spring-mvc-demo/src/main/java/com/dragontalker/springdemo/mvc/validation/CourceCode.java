@@ -12,4 +12,11 @@ import javax.validation.Constraint;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CourceCode {
 
+	// define default course code
+	
+	// define default error message
+	
+	// define default groups
+	
+	// define default payloads
 }
