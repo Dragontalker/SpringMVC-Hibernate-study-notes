@@ -11,7 +11,6 @@ public class TestJdbc {
         String user = "hbstudent";
         String pass = "hbstudent";
 
-
         try {
             System.out.println("Connecting to database: " + jdbcUrl);
 
