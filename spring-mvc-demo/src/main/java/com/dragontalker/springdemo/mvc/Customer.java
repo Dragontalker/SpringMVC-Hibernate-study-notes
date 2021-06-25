@@ -8,16 +8,20 @@ import javax.validation.constraints.Size;
 
 public class Customer {
 
+	@NotNull(message="is required")
+	@Size(min=1, message="is required")
 	private String firstName;
 	
 	@NotNull(message="is required")
 	@Size(min=1, message="is required")
 	private String lastName;
 	
+	@NotNull(message="is required")
 	@Min(value=0, message="must be greater than or equal to zero")
 	@Max(value=10, message="msut be less than or equal to 10")
 	private int freePasses;
 	
+	@NotNull(message="is required")
 	@Pattern(regexp="^[a-zA-Z0-9]{5}", message="only 5 chars/digits")
 	private String postalCode;
 
