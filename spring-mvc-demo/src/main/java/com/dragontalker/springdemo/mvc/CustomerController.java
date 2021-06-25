@@ -25,6 +25,11 @@ public class CustomerController {
 			@Valid @ModelAttribute("customer") Customer theCustomer,
 			BindingResult theBindingResult) {
 		
-		return "customer-confirmation";
+		if (theBindingResult.hasErrors()) {
+			return "customer-form";
+		} else {
+			return "customer-confirmation";
+		}
+		
 	}
 }
