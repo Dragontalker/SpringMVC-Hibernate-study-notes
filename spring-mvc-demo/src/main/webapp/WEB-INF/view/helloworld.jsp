@@ -7,6 +7,10 @@
 	
 	<br><br>
 	
+	Student: ${ param.studentName }
+	
+	<br><br>
+	
 	Message: ${ message }
 	
 	</body>
