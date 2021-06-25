@@ -4,12 +4,12 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 public class CourseCodeConstraintValidator 
-	implements ConstraintValidator<CourceCode, String>{
+	implements ConstraintValidator<CourseCode, String>{
 	
 	private String coursePrefix;
 	
 	@Override
-	public void initialize(CourceCode theCourseCode) {
+	public void initialize(CourseCode theCourseCode) {
 		coursePrefix = theCourseCode.value();
 	}
 
