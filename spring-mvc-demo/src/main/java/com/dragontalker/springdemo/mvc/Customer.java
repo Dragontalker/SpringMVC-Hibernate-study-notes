@@ -44,5 +44,13 @@ public class Customer {
 	public void setFreePasses(int freePasses) {
 		this.freePasses = freePasses;
 	}
+
+	public String getPostalCode() {
+		return postalCode;
+	}
+
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
+	}
 	
 }
