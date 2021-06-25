@@ -9,7 +9,7 @@ import com.dragontalker.hibernate.demo.entity.Student;
 public class CreateStudentDemo {
 
 	public static void main(String[] args) {
-		
+
 		// create session factory
 		SessionFactory factory = new Configuration()
 								.configure("hibernate.cfg.xml")
@@ -19,12 +19,10 @@ public class CreateStudentDemo {
 		// create session
 		Session session = factory.getCurrentSession();
 		
-		try {
-			// use the session object to save Java object
-			System.out.println("Creating a new student object...");
-			
+		try {			
 			// create a student object
-			Student tempStudent = new Student("Paul", "Wall", "paul@luv2code.com");
+			System.out.println("Creating new student object...");
+			Student tempStudent = new Student("Paul", "Doe", "paul@luv2code.com");
 			
 			// start a transaction
 			session.beginTransaction();
@@ -37,11 +35,10 @@ public class CreateStudentDemo {
 			session.getTransaction().commit();
 			
 			System.out.println("Done!");
-			
-		} finally {
+		}
+		finally {
 			factory.close();
 		}
-
 	}
 
 }
