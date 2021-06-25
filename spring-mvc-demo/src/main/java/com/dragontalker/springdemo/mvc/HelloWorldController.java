@@ -29,6 +29,15 @@ public class HelloWorldController {
 	@RequestMapping("/processFormVersionTwo")
 	public String letsShoutDude(HttpServletRequest request, Model model) {
 		 
+		// read the request parameter from the HTML form
+		
+		// convert the data to all caps
+		
+		// create the message
+		
+		// add message to the model
+	
+		
 		return "helloworld";
 	}
 
