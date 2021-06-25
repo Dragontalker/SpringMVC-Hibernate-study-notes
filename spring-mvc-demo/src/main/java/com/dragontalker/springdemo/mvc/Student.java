@@ -1,5 +1,7 @@
 package com.dragontalker.springdemo.mvc;
 
+import java.util.LinkedHashMap;
+
 public class Student {
 	
 	private String firstName;
@@ -7,6 +9,8 @@ public class Student {
 	private String lastName;
 	
 	private String country;
+	
+	private LinkedHashMap<String, String> countryOptions;
 	
 	public Student() {}
 
