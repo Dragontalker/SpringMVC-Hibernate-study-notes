@@ -20,6 +20,15 @@ public class CreateStudentDemo {
 
         try {
             // use the session object to save Java object
+
+            // create a student object
+
+            // start a transaction
+
+            // save the student object
+
+            // commit the transaction
+
         } finally {
             factory.close();
         }
