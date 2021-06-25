@@ -20,8 +20,16 @@ public class CreateStudentDemo {
 		Session session = factory.getCurrentSession();
 		
 		try {
-			
 			// use the session object to save Java object
+			
+			// create a student object
+			
+			// start a transaction
+			
+			// save the student object
+			
+			// commit transaction
+			
 		} finally {
 			factory.close();
 		}
