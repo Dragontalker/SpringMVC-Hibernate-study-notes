@@ -6,13 +6,17 @@
 	
 	<head>
 		<title>Customer Registration Form</title>
+		
+		<style>
+			.error {color:red}
+		</style>
 	</head>
 	
 	<body>
 	
 		<form:form action="processForm" modelAttribute="customer">
 		
-			Fill out the form. Asterisk(*) means required.
+			<i>Fill out the form. Asterisk(*) means required.</i>
 			
 			<br><br>
 		
@@ -20,7 +24,7 @@
 			
 			<br><br>
 			
-			Last name(*): <form:input path="lastName" />
+			Last name (*): <form:input path="lastName" />
 			<form:errors path="lastName" cssClass="error" />
 			
 			<br><br>
