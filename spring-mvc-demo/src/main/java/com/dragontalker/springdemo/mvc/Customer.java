@@ -33,5 +33,12 @@ public class Customer {
 		this.lastName = lastName;
 	}
 
+	public int getFreePasses() {
+		return freePasses;
+	}
+
+	public void setFreePasses(int freePasses) {
+		this.freePasses = freePasses;
+	}
 	
 }
