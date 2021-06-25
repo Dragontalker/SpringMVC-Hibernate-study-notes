@@ -10,6 +10,18 @@
 	
 	<body>
 	
+		<form:form action="processForm" modelAttribute="customer">
+		
+			First name: <form:input path="firstName" />
+			
+			<br><br>
+			
+			Last name: <form:input path="lastName" />
+			
+			<br><br>
+			
+		</form:form>
+	
 	</body>
 
 
