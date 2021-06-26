@@ -23,8 +23,10 @@ public class CreateDemo {
         Session session = factory.getCurrentSession();
 
         try {
+        	
         	// create the objects
-        	Instructor tempInstructor = new Instructor("Chad", "Darby", "darby@luv2code.com");
+        	Instructor tempInstructor = 
+        			new Instructor("Chad", "Darby", "darby@luv2code.com");
         	
         	InstructorDetail tempInstructorDetail =
         			new InstructorDetail(
@@ -34,17 +36,16 @@ public class CreateDemo {
         	// associate the objects
         	tempInstructor.setInstructorDetail(tempInstructorDetail);
         	
+        	// start a transaction
+            session.beginTransaction();
+            
         	// save the instructor
         	//
         	// Note: this will ALSO save the details object
         	// because of CascadeType.ALL
         	//
+        	System.out.println("Saving instructor: " + tempInstructor);
         	session.save(tempInstructor);
-        	
-            // start a transaction
-            session.beginTransaction();
-
-          
 
             // commit the transaction
             session.getTransaction().commit();
