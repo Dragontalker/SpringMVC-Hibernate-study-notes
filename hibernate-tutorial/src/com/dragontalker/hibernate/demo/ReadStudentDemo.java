@@ -22,13 +22,14 @@ public class ReadStudentDemo {
             System.out.println("Creating a new student object...");
 
             // create a student object
-            Student tempStudent = new Student("Paul", "Wall", "paul@luv2code.com");
+            Student tempStudent = new Student("Daffy", "Duck", "daffy@luv2code.com");
 
             // start a transaction
             session.beginTransaction();
 
             // save the student object
             System.out.println("Saving the student...");
+            System.out.println(tempStudent);
             session.save(tempStudent);
 
             // commit the transaction
