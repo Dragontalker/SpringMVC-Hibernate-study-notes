@@ -31,6 +31,9 @@ public class CreateDemo {
         					"http://www.luv2code.com/youtube",
         					"Luv 2 code!!!");
         	
+        	// associate the objects
+        	tempInstructor.setInstructorDetail(tempInstructorDetail);
+        	
             // start a transaction
             session.beginTransaction();
 
