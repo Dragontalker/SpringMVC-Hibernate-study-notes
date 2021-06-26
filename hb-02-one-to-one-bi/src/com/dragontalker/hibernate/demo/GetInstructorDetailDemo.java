@@ -27,6 +27,9 @@ public class GetInstructorDetailDemo {
             session.beginTransaction();
 
             // get the instructor detail object
+            int theId = 2;
+            InstructorDetail tempInstructorDetail =
+            		session.get(InstructorDetail.class, theId);
             
             // print the instructor detail
             
