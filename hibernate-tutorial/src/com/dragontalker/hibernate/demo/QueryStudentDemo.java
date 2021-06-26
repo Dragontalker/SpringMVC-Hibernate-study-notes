@@ -10,7 +10,8 @@ import org.hibernate.cfg.Configuration;
 
 public class QueryStudentDemo {
 
-    public static void main(String[] args) {
+    @SuppressWarnings("unchecked")
+	public static void main(String[] args) {
 
         // create session factory
         SessionFactory factory = new Configuration()
@@ -41,7 +42,27 @@ public class QueryStudentDemo {
             		.getResultList();
             
             // display the students
-            System.out.println("Students who has last name of Doe");
+            System.out.println("\n\nStudents who has last name of Doe");
+            displayStudents(theStudents);
+            
+            // query students: lastName='Doe' OR firstName='Daffy'
+            theStudents = session
+            		.createQuery("from Student s where"
+            				+ " s.lastName='Doe' OR s.firstName='Daffy'")
+            		.getResultList();
+            
+            // display the students
+            System.out.println("\n\nStudents who has first name of Daffy");
+            displayStudents(theStudents);
+            
+            // query students where email LIKE '%luv2code.com'
+            theStudents = session
+            		.createQuery("from Student s where" 
+            				+ " s.email LIKE '%luv2code.com'")
+            		.getResultList();
+            
+            // display the students
+            System.out.println("\n\nStudents who has email ends with luv2code.com");
             displayStudents(theStudents);
 
             // commit the transaction
