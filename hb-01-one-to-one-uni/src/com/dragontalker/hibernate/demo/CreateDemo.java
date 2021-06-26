@@ -26,12 +26,12 @@ public class CreateDemo {
         	
         	// create the objects
         	Instructor tempInstructor = 
-        			new Instructor("Chad", "Darby", "darby@luv2code.com");
+        			new Instructor("Madhu", "Patel", "madu@luv2code.com");
         	
         	InstructorDetail tempInstructorDetail =
         			new InstructorDetail(
-        					"http://www.luv2code.com/youtube",
-        					"Luv 2 code!!!");
+        					"http://www.youtube.com",
+        					"Guitar");
         	
         	// associate the objects
         	tempInstructor.setInstructorDetail(tempInstructorDetail);
