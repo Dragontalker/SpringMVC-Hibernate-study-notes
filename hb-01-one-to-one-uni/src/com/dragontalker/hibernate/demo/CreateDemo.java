@@ -23,6 +23,14 @@ public class CreateDemo {
         Session session = factory.getCurrentSession();
 
         try {
+        	// create the objects
+        	Instructor tempInstructor = new Instructor("Chad", "Darby", "darby@luv2code.com");
+        	
+        	InstructorDetail tempInstructorDetail =
+        			new InstructorDetail(
+        					"http://www.luv2code.com/youtube",
+        					"Luv 2 code!!!");
+        	
             // start a transaction
             session.beginTransaction();
 
