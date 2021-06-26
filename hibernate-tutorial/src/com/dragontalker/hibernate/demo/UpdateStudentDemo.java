@@ -29,6 +29,10 @@ public class UpdateStudentDemo {
             
             Student myStudent = session.get(Student.class, studentId);
             
+            // delete the student
+            System.out.println("Deleting student: " + myStudent);
+            session.delete(myStudent);
+            
             // commit the transaction
             session.getTransaction().commit();
             
