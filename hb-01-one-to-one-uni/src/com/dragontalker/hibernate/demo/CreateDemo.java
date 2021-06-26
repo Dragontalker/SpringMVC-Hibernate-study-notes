@@ -34,6 +34,13 @@ public class CreateDemo {
         	// associate the objects
         	tempInstructor.setInstructorDetail(tempInstructorDetail);
         	
+        	// save the instructor
+        	//
+        	// Note: this will ALSO save the details object
+        	// because of CascadeType.ALL
+        	//
+        	session.save(tempInstructor);
+        	
             // start a transaction
             session.beginTransaction();
 
