@@ -27,24 +27,35 @@ public class GetInstructorDetailDemo {
             session.beginTransaction();
 
             // get the instructor detail object
-            int theId = 2;
+            int theId = 2999;
             InstructorDetail tempInstructorDetail =
             		session.get(InstructorDetail.class, theId);
             
             // print the instructor detail
             System.out.println("tempInstructorDetail: " + tempInstructorDetail);
             
+            Instructor instructor = null;
+            
+            if (tempInstructorDetail != null) {
+            	instructor = tempInstructorDetail.getInstructor();
+            }
+            
             // print the associated instructor
-            System.out.println("the associated instructor: " +
-            				tempInstructorDetail.getInstructor());
+            System.out.println("the associated instructor: " + instructor);
 
             // commit the transaction
             session.getTransaction().commit();
 
             System.out.println("Done!!!");
 
+        } catch(Exception e) {
+        	e.printStackTrace();
         } finally {
-            factory.close();
-        }
+        	// handle connection leak issue
+        	session.close();
+        	
+        	factory.close();
+		}
+
     }
 }
