@@ -64,6 +64,16 @@ public class QueryStudentDemo {
             // display the students
             System.out.println("\n\nStudents who has email ends with luv2code.com");
             displayStudents(theStudents);
+            
+            // query students where email LIKE '%gmail.com'
+            theStudents = session
+            		.createQuery("from Student s where" 
+            				+ " s.email LIKE '%gmail.com'")
+            		.getResultList();
+            
+            // display the students
+            System.out.println("\n\nStudents who has email ends with gmail.com");
+            displayStudents(theStudents);
 
             // commit the transaction
             session.getTransaction().commit();
