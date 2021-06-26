@@ -8,7 +8,7 @@ import com.dragontalker.hibernate.demo.entity.Instructor;
 import com.dragontalker.hibernate.demo.entity.InstructorDetail;
 
 
-public class GetInstructorDetailDemo {
+public class DeleteInstructorDetailDemo {
 
     public static void main(String[] args) {
 
@@ -26,7 +26,22 @@ public class GetInstructorDetailDemo {
         	// start a transaction
             session.beginTransaction();
 
-
+            // get the instructor detail object
+            int theId = 2999;
+            InstructorDetail tempInstructorDetail =
+            		session.get(InstructorDetail.class, theId);
+            
+            // print the instructor detail
+            System.out.println("tempInstructorDetail: " + tempInstructorDetail);
+            
+            Instructor instructor = null;
+            
+            if (tempInstructorDetail != null) {
+            	instructor = tempInstructorDetail.getInstructor();
+            }
+            
+            // print the associated instructor
+            System.out.println("the associated instructor: " + instructor);
 
             // commit the transaction
             session.getTransaction().commit();
