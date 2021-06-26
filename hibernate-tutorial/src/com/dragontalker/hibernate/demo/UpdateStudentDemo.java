@@ -19,10 +19,17 @@ public class UpdateStudentDemo {
         Session session = factory.getCurrentSession();
 
         try {
+        	int studentId = 1;
+        	
             // start a transaction
             session.beginTransaction();
 
+            // retrieve student based on the id: primary key
+            System.out.println("\nGetting student with id: " + studentId);
             
+            Student myStudent = session.get(Student.class, studentId);
+            
+            System.out.println("Get complete: " + myStudent);
             
             // commit the transaction
             session.getTransaction().commit();
