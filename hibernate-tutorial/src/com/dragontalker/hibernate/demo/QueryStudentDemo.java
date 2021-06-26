@@ -1,6 +1,9 @@
 package com.dragontalker.hibernate.demo;
 
 import com.dragontalker.hibernate.demo.entity.Student;
+
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -24,10 +27,15 @@ public class QueryStudentDemo {
             session.beginTransaction();
 
             // query students
-            
+            List<Student> theStudents = 
+            		session
+            			.createQuery("from Student")
+            			.getResultList();
             
             // display the students
-            
+            for (Student tempStudent : theStudents) {
+            	System.out.println(tempStudent);
+            }
 
             // commit the transaction
             session.getTransaction().commit();
