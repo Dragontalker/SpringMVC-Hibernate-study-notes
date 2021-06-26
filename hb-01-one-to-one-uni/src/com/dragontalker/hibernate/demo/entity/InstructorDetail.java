@@ -18,5 +18,11 @@ public class InstructorDetail {
 	// generate getter/setter methods
 	
 	// generate toString() method
+	
+	private int id;
+	
+	private String youtubeChannel;
+	
+	private String hobby;
 
 }
