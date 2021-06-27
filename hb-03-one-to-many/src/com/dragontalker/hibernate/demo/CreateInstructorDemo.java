@@ -55,6 +55,9 @@ public class CreateInstructorDemo {
             System.out.println("Done!!!");
 
         } finally {
+        	// add clean up code
+        	session.close();
+        	
             factory.close();
         }
     }
