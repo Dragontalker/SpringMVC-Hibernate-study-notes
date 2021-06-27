@@ -1,6 +1,8 @@
 package com.dragontalker.testdb;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,6 +32,17 @@ public class TestDbServlet extends HttpServlet {
 		
 		// get connection to database
 		try {
+			PrintWriter out = response.getWriter();
+			
+			out.println("\n>> Connecting to database: " + jdbcUrl);
+			
+			Class.forName(driver);
+			
+			Connection myConn = DriverManager.getConnection(jdbcUrl, user, pass);
+			
+			out.println("\n>> SUCCESSFUL!!! " + myConn);
+			
+			myConn.close();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
