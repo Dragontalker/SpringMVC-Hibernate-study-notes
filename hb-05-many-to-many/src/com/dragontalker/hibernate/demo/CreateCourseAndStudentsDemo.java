@@ -44,6 +44,8 @@ public class CreateCourseAndStudentsDemo {
             Course tempCourse2 = new Course("Atari 2600 - Game Development");
             
             // add student to courses
+            tempCourse1.addStudent(tempStudent);
+            tempCourse2.addStudent(tempStudent);
             
             // save the courses
             
