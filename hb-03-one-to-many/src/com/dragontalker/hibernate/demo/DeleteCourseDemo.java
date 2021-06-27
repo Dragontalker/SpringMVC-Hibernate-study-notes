@@ -28,7 +28,14 @@ public class DeleteCourseDemo {
         	// start a transaction
             session.beginTransaction();
             
+            // get a course
+            int theId = 10;
+            Course tempCourse = session.get(Course.class, theId);
             
+            // delete course
+            System.out.println("Deleting course: " + tempCourse);
+            
+            session.delete(tempCourse);
 
             // commit the transaction
             session.getTransaction().commit();
