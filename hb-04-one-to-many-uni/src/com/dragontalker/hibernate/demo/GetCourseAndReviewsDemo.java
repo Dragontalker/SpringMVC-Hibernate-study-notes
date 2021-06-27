@@ -30,7 +30,15 @@ public class GetCourseAndReviewsDemo {
         	// start a transaction
             session.beginTransaction();
 
+            // get the course
+            int theId = 10;
+            Course tempCourse = session.get(Course.class, theId);
             
+            // print the course
+            System.out.println(">> " + tempCourse);
+            
+            // print the course reviews
+            System.out.println(">> " + tempCourse.getReviews());
             
             // commit the transaction
             session.getTransaction().commit();
