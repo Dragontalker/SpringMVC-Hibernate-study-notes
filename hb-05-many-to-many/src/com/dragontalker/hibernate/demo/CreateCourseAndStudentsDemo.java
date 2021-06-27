@@ -37,6 +37,7 @@ public class CreateCourseAndStudentsDemo {
             Student tempStudent = session.get(Student.class, studentId);
             
             System.out.println("\n>> Loaded student: " + tempStudent);
+            System.out.println(">> Courses: " + tempStudent.getCourses());
             
             // create more courses
             
