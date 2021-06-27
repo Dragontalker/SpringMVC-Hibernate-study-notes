@@ -32,27 +32,26 @@ public class AddCoursesForMaryDemo {
         	// start a transaction
             session.beginTransaction();
 
-            // create a course
-            Course tempCourse = new Course("Pacman - How To Score One Million Points");
+            // get the student mary from database
+            int studentId = 2;
+            Student tempStudent = session.get(Student.class, studentId);
             
-            // save the course
-            System.out.println("\n>> Saving the course ...");
-            session.save(tempCourse);
-            System.out.println(">> Saved the course: " + tempCourse);
+            System.out.println("\n>> Loaded student: " + tempStudent);
+            System.out.println(">> Courses: " + tempStudent.getCourses());
             
-            // create the students
-            Student tempStudent1 = new Student("John", "Doe", "john@luv2code.com");
-            Student tempStudent2 = new Student("Mary", "Public", "mary@luv2code.com");
+            // create more courses
+            Course tempCourse1 = new Course("Rubik's Cude - How to Speed Cube");
+            Course tempCourse2 = new Course("Atari 2600 - Game Development");
             
-            // add students to the course
-            tempCourse.addStudent(tempStudent1);
-            tempCourse.addStudent(tempStudent2);
+            // add student to courses
+            tempCourse1.addStudent(tempStudent);
+            tempCourse2.addStudent(tempStudent);
             
-            // save the students
-            System.out.println("\n>> Saving students ...");
-            session.save(tempStudent1);
-            session.save(tempStudent2);
-            System.err.println(">> Saved students: " + tempCourse.getStudents());
+            // save the courses
+            System.out.println("\n>>Saving the courses ...");
+            
+            session.save(tempCourse1);
+            session.save(tempCourse2);
             
             // commit the transaction
             session.getTransaction().commit();
