@@ -2,6 +2,8 @@ package com.dragontalker.springdemo.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,9 +18,10 @@ public class CustomerServiceImpl implements CustomerService {
 	private CustomerDAO customerDAO;
 	
 	@Override
+	@Transactional
 	public List<Customer> getCustomers() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return customerDAO.getCustomers();
 	}
 
 }
