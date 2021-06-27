@@ -7,6 +7,7 @@ import org.hibernate.cfg.Configuration;
 import com.dragontalker.hibernate.demo.entity.Course;
 import com.dragontalker.hibernate.demo.entity.Instructor;
 import com.dragontalker.hibernate.demo.entity.InstructorDetail;
+import com.dragontalker.hibernate.demo.entity.Review;
 
 
 public class CreateCourseAndReviewsDemo {
@@ -29,8 +30,12 @@ public class CreateCourseAndReviewsDemo {
             session.beginTransaction();
 
             // create a course
+            Course tempCourse = new Course("Pacman - How To Score One Million Points");
             
             // add some reviews
+            tempCourse.addReview(new Review("Great course ... loved it!"));
+            tempCourse.addReview(new Review("Cool course, job well done!"));
+            tempCourse.addReview(new Review("What a dumb course, you are an idiot!"));
             
             // save the course ... and leverage the cascade all 
             
