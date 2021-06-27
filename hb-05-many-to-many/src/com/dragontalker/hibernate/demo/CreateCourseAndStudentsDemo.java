@@ -33,6 +33,10 @@ public class CreateCourseAndStudentsDemo {
             session.beginTransaction();
 
             // get the student mary from database
+            int studentId = 2;
+            Student tempStudent = session.get(Student.class, studentId);
+            
+            System.out.println("\n>> Loaded student: " + tempStudent);
             
             // create more courses
             
