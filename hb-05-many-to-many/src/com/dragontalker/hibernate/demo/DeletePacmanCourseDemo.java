@@ -3,6 +3,7 @@ package com.dragontalker.hibernate.demo;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.usertype.CompositeUserType;
 
 import com.dragontalker.hibernate.demo.entity.Course;
 import com.dragontalker.hibernate.demo.entity.Instructor;
@@ -32,12 +33,13 @@ public class DeletePacmanCourseDemo {
         	// start a transaction
             session.beginTransaction();
 
-            // get the student mary from database
-            int studentId = 2;
-            Student tempStudent = session.get(Student.class, studentId);
+            // get the pacman course from db
+            int courseId = 10;
+            Course tempCourse = session.get(Course.class, courseId);
             
-            System.out.println("\n>> Loaded student: " + tempStudent);
-            System.out.println(">> Courses: " + tempStudent.getCourses());
+            // delete the course
+            System.out.println(">> Deleting course: " + tempCourse);
+            session.delete(tempCourse);
             
             // commit the transaction
             session.getTransaction().commit();
