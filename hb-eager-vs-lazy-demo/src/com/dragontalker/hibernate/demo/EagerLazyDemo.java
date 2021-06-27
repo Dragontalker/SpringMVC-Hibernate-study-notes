@@ -32,15 +32,15 @@ public class EagerLazyDemo {
             int theId = 1;
             Instructor tempInstructor = session.get(Instructor.class, theId);
             
-            System.out.println("Instructor: " + tempInstructor);
+            System.out.println(">> dragontalker: Instructor: " + tempInstructor);
             
             // get courses for the instructor
-            System.out.println("Courses: " + tempInstructor.getCourses());
+            System.out.println(">> dragontalker: Courses: " + tempInstructor.getCourses());
 
             // commit the transaction
             session.getTransaction().commit();
 
-            System.out.println("Done!!!");
+            System.out.println(">> dragontalker: Done!!!");
 
         } catch (Exception e) {
         	e.printStackTrace();
