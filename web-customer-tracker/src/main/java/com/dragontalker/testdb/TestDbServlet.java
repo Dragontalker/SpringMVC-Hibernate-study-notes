@@ -29,7 +29,12 @@ public class TestDbServlet extends HttpServlet {
 		String driver = "com.mysql.cj.jdbc.Driver";
 		
 		// get connection to database
-		
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new ServletException(e);
+		}
 	}
 
 }
