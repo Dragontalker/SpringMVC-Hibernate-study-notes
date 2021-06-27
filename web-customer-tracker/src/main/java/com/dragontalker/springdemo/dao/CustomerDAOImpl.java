@@ -17,7 +17,15 @@ public class CustomerDAOImpl implements CustomerDAO {
 	@Override
 	@Transactional
 	public List<Customer> getCustomers() {
-		// TODO Auto-generated method stub
+		
+		// get the current hibernate session
+		
+		// create a query
+		
+		// execute query and get result list
+		
+		// return the results
+		
 		return null;
 	}
 
