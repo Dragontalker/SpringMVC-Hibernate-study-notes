@@ -11,7 +11,7 @@ import com.dragontalker.hibernate.demo.entity.Review;
 import com.dragontalker.hibernate.demo.entity.Student;
 
 
-public class CreateCourseAndStudentsDemo {
+public class AddCoursesForMaryDemo {
 
     public static void main(String[] args) {
 
@@ -32,7 +32,27 @@ public class CreateCourseAndStudentsDemo {
         	// start a transaction
             session.beginTransaction();
 
+            // create a course
+            Course tempCourse = new Course("Pacman - How To Score One Million Points");
             
+            // save the course
+            System.out.println("\n>> Saving the course ...");
+            session.save(tempCourse);
+            System.out.println(">> Saved the course: " + tempCourse);
+            
+            // create the students
+            Student tempStudent1 = new Student("John", "Doe", "john@luv2code.com");
+            Student tempStudent2 = new Student("Mary", "Public", "mary@luv2code.com");
+            
+            // add students to the course
+            tempCourse.addStudent(tempStudent1);
+            tempCourse.addStudent(tempStudent2);
+            
+            // save the students
+            System.out.println("\n>> Saving students ...");
+            session.save(tempStudent1);
+            session.save(tempStudent2);
+            System.err.println(">> Saved students: " + tempCourse.getStudents());
             
             // commit the transaction
             session.getTransaction().commit();
