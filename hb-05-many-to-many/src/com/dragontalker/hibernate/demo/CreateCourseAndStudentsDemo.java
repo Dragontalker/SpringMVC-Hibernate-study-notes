@@ -48,6 +48,10 @@ public class CreateCourseAndStudentsDemo {
             tempCourse2.addStudent(tempStudent);
             
             // save the courses
+            System.out.println("\n>>Saving the courses ...");
+            
+            session.save(tempCourse1);
+            session.save(tempCourse2);
             
             // commit the transaction
             session.getTransaction().commit();
