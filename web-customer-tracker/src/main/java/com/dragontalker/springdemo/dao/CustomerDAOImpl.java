@@ -2,11 +2,12 @@ package com.dragontalker.springdemo.dao;
 
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.dragontalker.springdemo.entity.Customer;
-import com.mysql.cj.xdevapi.SessionFactory;
 
 public class CustomerDAOImpl implements CustomerDAO {
 	
@@ -19,6 +20,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	public List<Customer> getCustomers() {
 		
 		// get the current hibernate session
+		Session currentSession = sessionFactory.getCurrentSession();
 		
 		// create a query
 		
