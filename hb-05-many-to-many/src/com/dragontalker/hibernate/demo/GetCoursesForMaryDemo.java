@@ -39,20 +39,6 @@ public class GetCoursesForMaryDemo {
             System.out.println("\n>> Loaded student: " + tempStudent);
             System.out.println(">> Courses: " + tempStudent.getCourses());
             
-            // create more courses
-            Course tempCourse1 = new Course("Rubik's Cude - How to Speed Cube");
-            Course tempCourse2 = new Course("Atari 2600 - Game Development");
-            
-            // add student to courses
-            tempCourse1.addStudent(tempStudent);
-            tempCourse2.addStudent(tempStudent);
-            
-            // save the courses
-            System.out.println("\n>>Saving the courses ...");
-            
-            session.save(tempCourse1);
-            session.save(tempCourse2);
-            
             // commit the transaction
             session.getTransaction().commit();
 
