@@ -20,6 +20,7 @@ public class CreateCourseAndReviewsDemo {
                 .addAnnotatedClass(Instructor.class)
                 .addAnnotatedClass(InstructorDetail.class)
                 .addAnnotatedClass(Course.class)
+                .addAnnotatedClass(Review.class)
                 .buildSessionFactory();
 
         // create session
@@ -38,6 +39,11 @@ public class CreateCourseAndReviewsDemo {
             tempCourse.addReview(new Review("What a dumb course, you are an idiot!"));
             
             // save the course ... and leverage the cascade all 
+            System.out.println(">> Saving the course...");
+            System.out.println(">> " + tempCourse);
+            System.out.println(">> " + tempCourse.getReviews());
+            
+            session.save(tempCourse);
             
             // commit the transaction
             session.getTransaction().commit();
