@@ -25,6 +25,17 @@
 						<th>Last Name</th>
 						<th>Email</th>
 					</tr>
+					
+					<!-- loop over the print our customers -->
+					<c:forEach var="tempCustomer" items="${ customers }">
+						
+						<tr>
+							<td> ${ tempCustomers.firstName } </td>
+							<td> ${ tempCustomers.lastName } </td>
+							<td> ${ tempCustomers.email } </td>
+						</tr>
+						
+					</c:forEach>
 				</table>
 				
 			</div>
