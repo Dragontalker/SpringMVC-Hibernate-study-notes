@@ -18,6 +18,11 @@ public class CustomerController {
 	@RequestMapping("/list")
 	public String listCustomers(Model theModel) {
 		
+		// get customers from the dao
+		
+		// add the customers to the model
+		
+		
 		return "list-customers";
 	}
 }
