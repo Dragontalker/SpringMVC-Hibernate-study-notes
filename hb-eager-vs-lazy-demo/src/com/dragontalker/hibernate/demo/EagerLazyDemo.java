@@ -43,6 +43,8 @@ public class EagerLazyDemo {
             // close the session
             session.close();
             
+            System.err.println("\n>> Session is now closed!\n");
+            
             // get courses for the instructor
             System.out.println(">> After session.close(): Courses: " + tempInstructor.getCourses());
 
