@@ -28,12 +28,16 @@ public class CreateCourseAndReviewsDemo {
         	// start a transaction
             session.beginTransaction();
 
+            // create a course
             
+            // add some reviews
+            
+            // save the course ... and leverage the cascade all 
             
             // commit the transaction
             session.getTransaction().commit();
 
-            System.out.println("Done!!!");
+            System.out.println(">> Done!!!");
 
         } catch (Exception e) {
         	e.printStackTrace();
