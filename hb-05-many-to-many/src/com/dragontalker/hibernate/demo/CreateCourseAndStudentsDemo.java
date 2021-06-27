@@ -35,15 +35,7 @@ public class CreateCourseAndStudentsDemo {
             // create a course
             Course tempCourse = new Course("Pacman - How To Score One Million Points");
             
-            // add some reviews
-            tempCourse.addReview(new Review("Great course ... loved it!"));
-            tempCourse.addReview(new Review("Cool course, job well done!"));
-            tempCourse.addReview(new Review("What a dumb course, you are an idiot!"));
             
-            // save the course ... and leverage the cascade all 
-            System.out.println(">> Saving the course...");
-            System.out.println(">> " + tempCourse);
-            System.out.println(">> " + tempCourse.getReviews());
             
             session.save(tempCourse);
             
