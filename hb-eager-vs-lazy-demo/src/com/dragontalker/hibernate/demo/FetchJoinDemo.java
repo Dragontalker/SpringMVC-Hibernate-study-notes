@@ -1,5 +1,6 @@
 package com.dragontalker.hibernate.demo;
 
+import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -7,6 +8,7 @@ import org.hibernate.cfg.Configuration;
 import com.dragontalker.hibernate.demo.entity.Course;
 import com.dragontalker.hibernate.demo.entity.Instructor;
 import com.dragontalker.hibernate.demo.entity.InstructorDetail;
+
 
 
 public class FetchJoinDemo {
@@ -28,15 +30,25 @@ public class FetchJoinDemo {
         	// start a transaction
             session.beginTransaction();
             
+            // option 2: Hibernate query with HQL
+            
             // get the instructor from db
             int theId = 1;
-            Instructor tempInstructor = session.get(Instructor.class, theId);
+            
+            Query<Instructor> query = 
+            		session.createQuery("select i from Instructor i " 
+            					+ "JOIN FETCH i.courses " 
+            					+ "where i.id=:theInstructorId",
+            				Instructor.class);
+            
+            // set parameter on query
+            query.setParameter("theInstructorId", theId);
+            
+            // execute query and get instructor
+            Instructor tempInstructor = query.getSingleResult();
             
             System.out.println(">> dragontalker: Instructor: " + tempInstructor);
 
-            // option 1: call getter method while session is open
-            System.out.println(">> Before session.close(): Courses: " + tempInstructor.getCourses());
-            
             // commit the transaction
             session.getTransaction().commit();
             
