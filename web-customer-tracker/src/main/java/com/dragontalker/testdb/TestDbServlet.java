@@ -20,8 +20,16 @@ public class TestDbServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		// setup connection variables
+		String user = "springstudent";
+		String pass = "springstudent";
+		
+		String jdbcUrl = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&serverTimezone=UTC";
+		String driver = "com.mysql.cj.jdbc.Driver";
+		
+		// get connection to database
+		
 	}
 
 }
