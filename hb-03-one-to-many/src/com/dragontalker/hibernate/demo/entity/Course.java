@@ -13,6 +13,10 @@ public class Course {
 	
 	private Instructor instructor;
 	
-	
+	public Course() {}
+
+	public Course(String title) {
+		this.title = title;
+	}
 
 }
