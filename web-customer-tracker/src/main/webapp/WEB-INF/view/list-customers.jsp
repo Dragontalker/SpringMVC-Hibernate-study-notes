@@ -15,6 +15,21 @@
 			</div>
 		</div>
 		
+		<div id="container">
+			<div id="content">
+				<!-- add our HTML table here -->
+				
+				<table>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
+					</tr>
+				</table>
+				
+			</div>
+		</div>
+		
 	</body>
 	
 </html>
