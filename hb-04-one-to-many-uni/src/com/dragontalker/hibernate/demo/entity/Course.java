@@ -1,5 +1,6 @@
 package com.dragontalker.hibernate.demo.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -67,6 +68,16 @@ public class Course {
 
 	public void setReviews(List<Review> reviews) {
 		this.reviews = reviews;
+	}
+	
+	// add a convenience method
+	public void addReview(Review theReview) {
+		
+		if (reviews == null) {
+			reviews = new ArrayList<>();
+		}
+		
+		reviews.add(theReview);
 	}
 
 	@Override
