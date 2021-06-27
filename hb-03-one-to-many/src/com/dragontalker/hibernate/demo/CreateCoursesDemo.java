@@ -28,7 +28,13 @@ public class CreateCoursesDemo {
         	// start a transaction
             session.beginTransaction();
             
-
+            // get the instructor from db
+            
+            // create some courses
+            
+            // add courses to instructor
+            
+            // save the courses
 
             // commit the transaction
             session.getTransaction().commit();
