@@ -6,11 +6,13 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -29,7 +31,8 @@ public class Course {
 						CascadeType.DETACH, CascadeType.REFRESH})
 	@JoinColumn(name = "instructor_id")
 	private Instructor instructor;
-	
+
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Review> reviews;
 	
 	public Course() {}
