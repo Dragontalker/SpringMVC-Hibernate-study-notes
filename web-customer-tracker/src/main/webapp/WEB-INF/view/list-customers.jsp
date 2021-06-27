@@ -30,9 +30,9 @@
 					<c:forEach var="tempCustomer" items="${ customers }">
 						
 						<tr>
-							<td> ${ tempCustomers.firstName } </td>
-							<td> ${ tempCustomers.lastName } </td>
-							<td> ${ tempCustomers.email } </td>
+							<td> ${ tempCustomer.firstName } </td>
+							<td> ${ tempCustomer.lastName } </td>
+							<td> ${ tempCustomer.email } </td>
 						</tr>
 						
 					</c:forEach>
