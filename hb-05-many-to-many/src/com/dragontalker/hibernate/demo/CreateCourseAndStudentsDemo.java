@@ -8,6 +8,7 @@ import com.dragontalker.hibernate.demo.entity.Course;
 import com.dragontalker.hibernate.demo.entity.Instructor;
 import com.dragontalker.hibernate.demo.entity.InstructorDetail;
 import com.dragontalker.hibernate.demo.entity.Review;
+import com.dragontalker.hibernate.demo.entity.Student;
 
 
 public class CreateCourseAndStudentsDemo {
@@ -21,6 +22,7 @@ public class CreateCourseAndStudentsDemo {
                 .addAnnotatedClass(InstructorDetail.class)
                 .addAnnotatedClass(Course.class)
                 .addAnnotatedClass(Review.class)
+                .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
 
         // create session
