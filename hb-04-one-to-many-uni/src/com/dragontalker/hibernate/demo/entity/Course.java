@@ -1,5 +1,7 @@
 package com.dragontalker.hibernate.demo.entity;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,6 +28,8 @@ public class Course {
 						CascadeType.DETACH, CascadeType.REFRESH})
 	@JoinColumn(name = "instructor_id")
 	private Instructor instructor;
+	
+	private List<Review> reviews;
 	
 	public Course() {}
 
@@ -55,6 +59,14 @@ public class Course {
 
 	public void setInstructor(Instructor instructor) {
 		this.instructor = instructor;
+	}
+
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
 	}
 
 	@Override
