@@ -33,7 +33,16 @@ public class DeleteMaryStudentDemo {
         	// start a transaction
             session.beginTransaction();
 
-
+            // get the student mary from database
+            int studentId = 2;
+            Student tempStudent = session.get(Student.class, studentId);
+            
+            System.out.println("\n>> Loaded student: " + tempStudent);
+            System.out.println(">> Courses: " + tempStudent.getCourses());
+            
+            // delete student
+            System.out.println("\n>> Deleting student: " + tempStudent);
+            session.delete(tempStudent);
             
             // commit the transaction
             session.getTransaction().commit();
