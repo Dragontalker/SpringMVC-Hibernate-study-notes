@@ -54,6 +54,8 @@ public class CreateInstructorDemo {
 
             System.out.println("Done!!!");
 
+        } catch (Exception e) {
+        	e.printStackTrace();
         } finally {
         	// add clean up code
         	session.close();
