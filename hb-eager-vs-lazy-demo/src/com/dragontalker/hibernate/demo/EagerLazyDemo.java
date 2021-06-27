@@ -33,12 +33,18 @@ public class EagerLazyDemo {
             Instructor tempInstructor = session.get(Instructor.class, theId);
             
             System.out.println(">> dragontalker: Instructor: " + tempInstructor);
-            
-            // get courses for the instructor
-            System.out.println(">> dragontalker: Courses: " + tempInstructor.getCourses());
 
+            // option 1: call getter method while session is open
+            System.out.println(">> Before session.close(): Courses: " + tempInstructor.getCourses());
+            
             // commit the transaction
             session.getTransaction().commit();
+            
+            // close the session
+            session.close();
+            
+            // get courses for the instructor
+            System.out.println(">> After session.close(): Courses: " + tempInstructor.getCourses());
 
             System.out.println(">> dragontalker: Done!!!");
 
