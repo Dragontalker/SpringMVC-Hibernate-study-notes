@@ -40,6 +40,8 @@ public class CreateCourseAndStudentsDemo {
             System.out.println(">> Courses: " + tempStudent.getCourses());
             
             // create more courses
+            Course tempCourse1 = new Course("Rubik's Cude - How to Speed Cube");
+            Course tempCourse2 = new Course("Atari 2600 - Game Development");
             
             // add student to courses
             
