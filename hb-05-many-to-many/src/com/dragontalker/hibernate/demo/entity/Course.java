@@ -93,6 +93,16 @@ public class Course {
 		
 		reviews.add(theReview);
 	}
+	
+	// add a convenience method
+	public void addStudent(Student theStudent) {
+		
+		if (students == null) {
+			students = new ArrayList<>();
+		}
+		
+		students.add(theStudent);
+	}
 
 	@Override
 	public String toString() {
