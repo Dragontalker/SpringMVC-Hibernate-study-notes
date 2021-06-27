@@ -1,5 +1,6 @@
 package com.dragontalker.hibernate.demo.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -102,6 +103,18 @@ public class Instructor {
 	public String toString() {
 		return "Instructor [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
 				+ ", instructorDetail=" + instructorDetail + "]";
+	}
+	
+	// add convenience methods for bi-directional relationship
+	public void add(Course tempCourse) {
+		
+		if (courses == null) {
+			courses = new ArrayList<Course>();
+		}
+		
+		courses.add(tempCourse);
+		
+		tempCourse.setInstructor(this);
 	}
 	
 }
