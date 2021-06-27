@@ -35,9 +35,10 @@ public class CreateCourseAndStudentsDemo {
             // create a course
             Course tempCourse = new Course("Pacman - How To Score One Million Points");
             
-            
-            
+            // save the course
+            System.out.println("\n>> Saving the course ...");
             session.save(tempCourse);
+            System.out.println("Saved the course: " + tempCourse);
             
             // commit the transaction
             session.getTransaction().commit();
