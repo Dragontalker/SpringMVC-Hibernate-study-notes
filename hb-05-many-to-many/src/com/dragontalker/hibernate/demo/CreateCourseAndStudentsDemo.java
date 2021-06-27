@@ -32,7 +32,13 @@ public class CreateCourseAndStudentsDemo {
         	// start a transaction
             session.beginTransaction();
 
+            // get the student mary from database
             
+            // create more courses
+            
+            // add student to courses
+            
+            // save the courses
             
             // commit the transaction
             session.getTransaction().commit();
