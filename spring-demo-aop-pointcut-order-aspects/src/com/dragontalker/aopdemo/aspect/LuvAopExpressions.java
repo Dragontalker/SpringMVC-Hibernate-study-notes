@@ -9,17 +9,17 @@ import org.springframework.stereotype.Component;
 public class LuvAopExpressions {
 
 	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.*(..))")
-	private void forDaoPackage() {}
+	public void forDaoPackage() {}
 	
 	// create point cut for getter methods
 	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.get*(..))")
-	private void getter() {}
+	public void getter() {}
 	
 	// create point cut for setter methods
 	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.set*(..))")
-	private void setter() {}
+	public void setter() {}
 	
 	// combine point cut: include package ... exclude getter/setter
 	@Pointcut("forDaoPackage() && !(getter() || setter())")
-	private void forDaoPackageNoGetterSetter() {}
+	public void forDaoPackageNoGetterSetter() {}
 }
