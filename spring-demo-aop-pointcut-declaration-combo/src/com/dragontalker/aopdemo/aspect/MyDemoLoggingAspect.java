@@ -12,25 +12,25 @@ public class MyDemoLoggingAspect {
 	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.*(..))")
 	private void forDaoPackage() {}
 	
-//	// create point cut for getter methods
-//	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.get*(..))")
-//	private void getter() {}
-//	
-//	// create point cut for setter methods
-//	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.set*(..))")
-//	private void setter() {}
-//	
-//	// combine point cut: include package ... exclude getter/setter
-//	@Pointcut("forDaoPackage() && !(getter() || setter())")
-//	private void forDaoPackageNoGetterSetter() {}
+	// create point cut for getter methods
+	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.get*(..))")
+	private void getter() {}
 	
-	@Before("forDaoPackage()")
+	// create point cut for setter methods
+	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.set*(..))")
+	private void setter() {}
+	
+	// combine point cut: include package ... exclude getter/setter
+	@Pointcut("forDaoPackage() && !(getter() || setter())")
+	private void forDaoPackageNoGetterSetter() {}
+	
+	@Before("forDaoPackageNoGetterSetter()")
 	public void beforeAddMethod() {
 		
 		System.out.println("\n>> Excuting @Before advice on any add method!");
 	}
 	
-	@Before("forDaoPackage()")
+	@Before("forDaoPackageNoGetterSetter()")
 	public void performApiAnalytics() {
 		
 		System.out.println(">> Performing API analytics");
