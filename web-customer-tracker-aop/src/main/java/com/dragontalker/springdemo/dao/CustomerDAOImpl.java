@@ -7,10 +7,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.dragontalker.springdemo.entity.Customer;
-import com.sun.swing.internal.plaf.metal.resources.metal;
 
 @Repository
 public class CustomerDAOImpl implements CustomerDAO {
