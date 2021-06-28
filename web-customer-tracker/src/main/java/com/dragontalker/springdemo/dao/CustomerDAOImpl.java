@@ -59,4 +59,10 @@ public class CustomerDAOImpl implements CustomerDAO {
 		return theCustomer;
 	}
 
+	@Override
+	public void deleteCustomer(int theId) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
