@@ -15,9 +15,14 @@ public class CRMLoggingAspect {
 	
 	// setup pointcut declarations
 	@Pointcut("execution(* com.dragontalker.springdemo.controller.*.*.(..))")
-	private void forControllerPackage() {
-		
-	}
+	private void forControllerPackage() {}
+	
+	// do the same for service and dao
+	@Pointcut("execution(* com.dragontalker.springdemo.service.*.*.(..))")
+	private void forServicePackage() {}
+	
+	@Pointcut("execution(* com.dragontalker.springdemo.dao.*.*.(..))")
+	private void forDaoPackage() {}
 	
 	// add @Before advice
 	
