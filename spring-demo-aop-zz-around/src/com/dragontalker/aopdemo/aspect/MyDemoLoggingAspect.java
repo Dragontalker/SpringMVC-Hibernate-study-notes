@@ -25,6 +25,16 @@ public class MyDemoLoggingAspect {
 	public Object aroundGetFortune(
 			ProceedingJoinPoint theProceedingJoinPoint) throws Throwable{
 		
+		// print out method we are advising on
+		
+		// get begin time stamp
+		
+		// now, let's execute the method
+		
+		// get the end time stamp
+		
+		// compute duration and display it
+		
 		return null;
 	}
 	
