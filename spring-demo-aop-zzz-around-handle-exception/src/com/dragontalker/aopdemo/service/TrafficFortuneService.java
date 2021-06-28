@@ -28,6 +28,6 @@ public class TrafficFortuneService {
 			throw new RuntimeException("Major accident! Highway is closed!");
 		}
 		
-		return "Expect heavy traffic this morning";
+		return getFortune();
 	}
 }
