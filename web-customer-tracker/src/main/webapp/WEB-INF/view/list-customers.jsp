@@ -38,6 +38,7 @@
 						<th>First Name</th>
 						<th>Last Name</th>
 						<th>Email</th>
+						<th>Action</th>
 					</tr>
 					
 					<!-- loop over the print our customers -->
