@@ -63,7 +63,7 @@
 								<!-- display the update link -->
 								<a href="${ updateLink }">Update</a>
 								|
-								Delete
+								<a href="${ deleteLink }">Delete</a>
 							</td>
 						</tr>
 						
