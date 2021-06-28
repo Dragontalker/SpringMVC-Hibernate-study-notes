@@ -14,7 +14,7 @@ public class AccountDAO {
 	private String serviceCode;
 	
 	// add a new method: findAccounts()
-	public List<Account> findAccounts() {
+	public List<Account> findAccounts(boolean tripWire) {
 		
 		List<Account> myAccounts = new ArrayList<>();
 		
