@@ -7,6 +7,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -20,7 +21,7 @@ import com.dragontalker.aopdemo.Account;
 @Order(2)
 public class MyDemoLoggingAspect {
 	
-	
+	@Around("execution(* com.dragontalker.aopdemo.service.*.getFortune(..))")
 	public Object aroundGetFortune(
 			ProceedingJoinPoint theProceedingJoinPoint) throws Throwable{
 		
