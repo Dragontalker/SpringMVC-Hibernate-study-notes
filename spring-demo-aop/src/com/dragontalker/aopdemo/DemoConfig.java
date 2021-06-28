@@ -6,7 +6,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
 @EnableAspectJAutoProxy
-@ComponentScan(basePackages = "com.dragontalker.aopdemo")
+@ComponentScan("com.dragontalker.aopdemo")
 public class DemoConfig {
 
 }
