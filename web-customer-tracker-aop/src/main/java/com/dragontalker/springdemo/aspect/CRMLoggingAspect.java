@@ -1,5 +1,7 @@
 package com.dragontalker.springdemo.aspect;
 
+import java.util.logging.Logger;
+
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
@@ -8,6 +10,7 @@ import org.springframework.stereotype.Component;
 public class CRMLoggingAspect {
 
 	// setup logger
+	private Logger myLogger = Logger.getLogger(getClass().getName());
 	
 	// setup pointcut declarations
 	
