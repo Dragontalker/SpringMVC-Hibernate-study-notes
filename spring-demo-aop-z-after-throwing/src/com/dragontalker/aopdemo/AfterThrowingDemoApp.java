@@ -21,7 +21,7 @@ public class AfterThrowingDemoApp {
 		List<Account> theAccounts = null;
 		
 		try {
-			// add a boolean flag to simulate exeception
+			// add a boolean flag to simulate exception
 			boolean tripWire = true;
 			
 			theAccounts = theAccountDAO.findAccounts(tripWire);
