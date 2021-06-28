@@ -24,11 +24,8 @@ public class MainDemoApp {
 		// call the business method
 		theAccountDAO.addAccount();
 		
-		// do it again!
-		System.out.println("\nLet's call it again!\n");
-		
-		// call the business method again
-		theAccountDAO.addAccount();
+		// call the membership business method
+		theMembershipDAO.addAccount();
 		
 		// close the context
 		context.close();
