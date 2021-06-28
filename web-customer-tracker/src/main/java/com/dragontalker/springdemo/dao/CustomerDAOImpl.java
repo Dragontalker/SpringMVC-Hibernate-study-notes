@@ -49,7 +49,11 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Override
 	public Customer getCustomer(int theId) {
-		// TODO Auto-generated method stub
+		
+		// get the current hibernate session
+		
+		// now retrieve/read from database using the primary key
+		
 		return null;
 	}
 
