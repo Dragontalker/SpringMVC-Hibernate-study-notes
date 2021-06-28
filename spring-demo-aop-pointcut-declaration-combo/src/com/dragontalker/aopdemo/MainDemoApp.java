@@ -30,6 +30,9 @@ public class MainDemoApp {
 		theAccountDAO.setName("foobar");
 		theAccountDAO.setServiceCode("silver");
 		
+		String name = theAccountDAO.getName();
+		String code = theAccountDAO.getServiceCode(); 
+		
 		// call the membership business method
 		theMembershipDAO.addSillyMember();
 		theMembershipDAO.goToSleep();
