@@ -27,19 +27,19 @@ public class MyDemoLoggingAspect {
 	@Before("forDaoPackageNoGetterSetter()")
 	public void beforeAddMethod() {
 		
-		System.out.println("\n>> Excuting @Before advice on any add method!");
+		System.out.println("\n=====>> Excuting @Before advice on any add method!");
 	}
 	
 	@Before("forDaoPackageNoGetterSetter()")
 	public void performApiAnalytics() {
 		
-		System.out.println("\n>> Performing API analytics");
+		System.out.println("\n=====>> Performing API analytics");
 	}
 	
 	@Before("forDaoPackageNoGetterSetter()")
 	public void logToCloudAsync() {
 		
-		System.out.println("\n>> Logging to Cloud in async fashion");
+		System.out.println("\n=====>> Logging to Cloud in async fashion");
 	}
 	
 }
