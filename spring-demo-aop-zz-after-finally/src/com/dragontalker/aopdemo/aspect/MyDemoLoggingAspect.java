@@ -3,6 +3,7 @@ package com.dragontalker.aopdemo.aspect;
 import java.util.List;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
@@ -18,7 +19,7 @@ import com.dragontalker.aopdemo.Account;
 @Order(2)
 public class MyDemoLoggingAspect {
 	
-	
+	@After("execution(* com.dragontalker.aopdemo.dao.AccountDAO.findAccounts(..))")
 	public void afterFinallyFindAccountsAdvice(JoinPoint theJoinPoint) {
 		
 	}
