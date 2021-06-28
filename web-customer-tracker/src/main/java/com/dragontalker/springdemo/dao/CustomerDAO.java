@@ -8,5 +8,5 @@ public interface CustomerDAO {
 
 	public List<Customer> getCustomers();
 
-	public void addCustomer();
+	public void addCustomer(Customer theCustomer);
 }

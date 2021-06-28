@@ -35,4 +35,10 @@ public class CustomerDAOImpl implements CustomerDAO {
 		return customers;
 	}
 
+	@Override
+	public void addCustomer(Customer theCustomer) {
+		
+		
+	}
+
 }
