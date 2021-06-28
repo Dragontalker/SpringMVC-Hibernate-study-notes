@@ -20,7 +20,11 @@ public class MyDemoLoggingAspect {
 	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.set*(..))")
 	private void setter() {}
 	
-	@Before("forDaoPackage()")
+	// combine point cut: include package ... exclude getter/setter
+	@Pointcut("forDaoPackage() && !(getter() || setter())")
+	private void forDaoPackageNoGetterSetter() {}
+	
+	@Before("forDaoPackageNoGetterSetter()")
 	public void beforeAddMethod() {
 		
 		System.out.println("\n>> Excuting @Before advice on any add method!");
