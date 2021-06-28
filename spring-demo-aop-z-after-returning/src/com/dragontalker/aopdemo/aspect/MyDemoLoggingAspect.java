@@ -1,5 +1,7 @@
 package com.dragontalker.aopdemo.aspect;
 
+import java.util.List;
+
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
@@ -20,8 +22,15 @@ public class MyDemoLoggingAspect {
 			pointcut = "* com.dragontalker.aopdemo.dao.AccountDAO.findAccounts(..)",
 			returning = "result"
 			)
-	public void afterReturningFindAccountsAdvice() {
+	public void afterReturningFindAccountsAdvice(
+					JoinPoint theJoinPoint, List<Account> result) {
 		
+		// print out which method we are advising on
+		String method = theJoinPoint.getSignature().toShortString();
+		System.out.println("\n>>> Executing @AfterReturning on method: " + method);
+		
+		// print out the results of the method call
+		System.out.println("\n>>> result is: " + result);
 	}
 	
 	@Before("com.dragontalker.aopdemo.aspect.LuvAopExpressions.forDaoPackageNoGetterSetter()")
