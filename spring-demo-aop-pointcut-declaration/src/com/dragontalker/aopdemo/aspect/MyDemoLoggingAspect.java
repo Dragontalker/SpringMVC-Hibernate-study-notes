@@ -16,7 +16,9 @@ public class MyDemoLoggingAspect {
 	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.get*(..))")
 	private void getter() {}
 	
-	
+	// create point cut for setter methods
+	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.set*(..))")
+	private void setter() {}
 	
 	@Before("forDaoPackage()")
 	public void beforeAddMethod() {
