@@ -33,6 +33,11 @@ public class CRMLoggingAspect {
 	@Before("forAppFlow()")
 	public void before(JoinPoint theJoinPoint) {
 		
+		// display method we are calling
+		String theMethod = theJoinPoint.getSignature().toShortString();
+		myLogger.info(">> in @Before: calling method: " + theMethod);
+		
+		// display the arguments to the method
 	}
 	
 	// add @AfterReturning advice
