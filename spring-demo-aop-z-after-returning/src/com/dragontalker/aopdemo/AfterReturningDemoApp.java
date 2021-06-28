@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.dragontalker.aopdemo.dao.AccountDAO;
-import com.dragontalker.aopdemo.dao.MembershipDAO;
 
 public class AfterReturningDemoApp {
 

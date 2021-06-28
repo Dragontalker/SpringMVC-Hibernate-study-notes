@@ -31,6 +31,11 @@ public class MyDemoLoggingAspect {
 		
 		// print out the results of the method call
 		System.out.println("\n>>> result is: " + result);
+		
+		// let's post-process the data ... let's modify it!
+		
+		// convert the account names to upper case
+		convertAccountNamesToUpperCase(result);
 	}
 	
 	@Before("com.dragontalker.aopdemo.aspect.LuvAopExpressions.forDaoPackageNoGetterSetter()")
