@@ -59,12 +59,13 @@ public class CustomerController {
 									Model theModel) {
 		
 		// get the customer from the database
+		Customer theCustomer = customerService.getCustomers(theId);
 		
 		// set customer as a model attribute to pre-populate the form
-		
+		theModel.addAttribute("customer", theCustomer);
 		// send over to our form
 		
-		return null;
+		return "customer-form";
 		
 	}
 	
