@@ -41,11 +41,16 @@ public class MyDemoLoggingAspect {
 	private void convertAccountNamesToUpperCase(List<Account> result) {
 		
 		// loop through accounts
-		
-		// get upper case version of name
-		
-		// update the name on the account
-		
+		for (Account tempAccount : result) {
+			
+			// get upper case version of name
+			String theUpperName = tempAccount.getName().toUpperCase();
+			
+			// update the name on the account
+			tempAccount.setName(theUpperName);
+			
+		}
+				
 	}
 
 	@Before("com.dragontalker.aopdemo.aspect.LuvAopExpressions.forDaoPackageNoGetterSetter()")
