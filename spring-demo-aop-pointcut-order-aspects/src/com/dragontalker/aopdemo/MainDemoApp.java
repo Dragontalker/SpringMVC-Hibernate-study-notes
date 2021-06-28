@@ -31,7 +31,9 @@ public class MainDemoApp {
 		theAccountDAO.setServiceCode("silver");
 		
 		String name = theAccountDAO.getName();
+		System.out.println(name);
 		String code = theAccountDAO.getServiceCode(); 
+		System.out.println(code);
 		
 		// call the membership business method
 		theMembershipDAO.addSillyMember();
