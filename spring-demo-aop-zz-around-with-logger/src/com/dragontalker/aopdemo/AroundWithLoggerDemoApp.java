@@ -21,15 +21,15 @@ public class AroundWithLoggerDemoApp {
 		TrafficFortuneService theFortuneService = 
 				context.getBean("trafficFortuneService", TrafficFortuneService.class);
 		
-		myLogger.info("\n>> Main Program: AroundDemoApp");
+		myLogger.info(">> Main Program: AroundDemoApp");
 		
-		myLogger.info("\n>> Calling getFortune()");
+		myLogger.info(">> Calling getFortune()");
 
 		String data = theFortuneService.getFortune();
 		
-		myLogger.info("\n>> My fortune is: " + data);
+		myLogger.info(">> My fortune is: " + data);
 		
-		myLogger.info("\n>> Finished");
+		myLogger.info(">> Finished");
 		
 		// close the context
 		context.close();
