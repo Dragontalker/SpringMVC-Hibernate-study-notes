@@ -51,10 +51,12 @@ public class CustomerDAOImpl implements CustomerDAO {
 	public Customer getCustomer(int theId) {
 		
 		// get the current hibernate session
+		Session currentSession = sessionFactory.getCurrentSession();
 		
 		// now retrieve/read from database using the primary key
+		Customer theCustomer = currentSession.get(Customer.class, theId);
 		
-		return null;
+		return theCustomer;
 	}
 
 }
