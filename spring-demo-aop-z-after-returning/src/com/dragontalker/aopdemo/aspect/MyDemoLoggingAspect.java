@@ -36,6 +36,8 @@ public class MyDemoLoggingAspect {
 		
 		// convert the account names to upper case
 		convertAccountNamesToUpperCase(result);
+		
+		System.out.println("\n>>> modified result is: " + result);
 	}
 	
 	private void convertAccountNamesToUpperCase(List<Account> result) {
