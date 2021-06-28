@@ -7,4 +7,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class CRMLoggingAspect {
 
+	// setup logger
+	
+	// setup pointcut declarations
+	
+	// add @Before advice
+	
+	// add @AfterReturning advice
+	
 }
