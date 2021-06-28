@@ -17,10 +17,6 @@ public class MyDemoLoggingAspect {
 	
 	
 	
-	@Before("forDaoPackageNoGetterSetter()")
-	public void logToCloudAsync() {
-		
-		System.out.println("\n=====>> Logging to Cloud in async fashion");
-	}
+	
 	
 }
