@@ -1,6 +1,7 @@
 package com.dragontalker.aopdemo.aspect;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -13,6 +14,15 @@ import com.dragontalker.aopdemo.Account;
 @Component
 @Order(2)
 public class MyDemoLoggingAspect {
+	
+	// add a new advice for @AfterReturning on the findAccounts method
+	@AfterReturning(
+			pointcut = "* com.dragontalker.aopdemo.dao.AccountDAO.findAccounts(..)",
+			returning = "result"
+			)
+	public void afterReturningFindAccountsAdvice() {
+		
+	}
 	
 	@Before("com.dragontalker.aopdemo.aspect.LuvAopExpressions.forDaoPackageNoGetterSetter()")
 	public void beforeAddMethod(JoinPoint theJoinPoint) {
