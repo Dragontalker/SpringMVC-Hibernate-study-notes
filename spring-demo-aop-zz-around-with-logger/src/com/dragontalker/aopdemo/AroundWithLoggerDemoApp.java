@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.dragontalker.aopdemo.service.TrafficFortuneService;
+
 public class AroundWithLoggerDemoApp {
 
 	private static Logger myLogger = 

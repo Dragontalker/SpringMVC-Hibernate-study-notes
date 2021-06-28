@@ -127,7 +127,7 @@ public class MyDemoLoggingAspect {
 		
 		// loop thru args
 		for (int i = 0; i < argObjects.length; i++) {
-			myLogger.info(">> #" + i + " argument: " + argObjects[i]);
+			myLogger.info(">> #" + i + " argument: " + argObjects[i].toString());
 			
 			if (argObjects[i] instanceof Account) {
 				
