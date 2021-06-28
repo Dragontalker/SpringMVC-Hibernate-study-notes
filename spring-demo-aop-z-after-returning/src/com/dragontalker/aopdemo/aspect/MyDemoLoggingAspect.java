@@ -38,6 +38,16 @@ public class MyDemoLoggingAspect {
 		convertAccountNamesToUpperCase(result);
 	}
 	
+	private void convertAccountNamesToUpperCase(List<Account> result) {
+		
+		// loop through accounts
+		
+		// get upper case version of name
+		
+		// update the name on the account
+		
+	}
+
 	@Before("com.dragontalker.aopdemo.aspect.LuvAopExpressions.forDaoPackageNoGetterSetter()")
 	public void beforeAddMethod(JoinPoint theJoinPoint) {
 		
