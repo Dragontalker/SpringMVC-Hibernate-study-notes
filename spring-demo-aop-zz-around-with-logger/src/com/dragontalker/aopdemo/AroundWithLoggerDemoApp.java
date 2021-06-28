@@ -5,8 +5,6 @@ import java.util.logging.Logger;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.dragontalker.aopdemo.service.TrafficFortuneService;
-import com.sun.org.apache.xml.internal.security.keys.keyresolver.implementations.PrivateKeyResolver;
-
 public class AroundWithLoggerDemoApp {
 
 	private static Logger myLogger = 

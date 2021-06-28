@@ -1,6 +1,7 @@
 package com.dragontalker.aopdemo.aspect;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -20,6 +21,8 @@ import com.dragontalker.aopdemo.Account;
 @Component
 @Order(2)
 public class MyDemoLoggingAspect {
+	
+	private Logger myLogger = Logger.getLogger(getClass().getName());
 	
 	@Around("execution(* com.dragontalker.aopdemo.service.*.getFortune(..))")
 	public Object aroundGetFortune(
