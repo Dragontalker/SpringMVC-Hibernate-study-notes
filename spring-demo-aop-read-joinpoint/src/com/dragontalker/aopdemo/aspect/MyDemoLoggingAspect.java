@@ -31,15 +31,15 @@ public class MyDemoLoggingAspect {
 		
 		// loop thru args
 		for (int i = 0; i < argObjects.length; i++) {
-			System.out.println(">> #" + i + "arguments: " + argObjects[i]);
+			System.out.println(">> #" + i + " argument: " + argObjects[i]);
 			
 			if (argObjects[i] instanceof Account) {
 				
 				// downcast and print Account specific stuff
 				Account theAccount = (Account) argObjects[i];
 				
-				System.out.println(">> account name: " + theAccount.getName());
-				System.out.println(">> account level: " + theAccount.getLevel());
+				System.out.println(">>> account name: " + theAccount.getName());
+				System.out.println(">>> account level: " + theAccount.getLevel());
 			}
 		}
 		
