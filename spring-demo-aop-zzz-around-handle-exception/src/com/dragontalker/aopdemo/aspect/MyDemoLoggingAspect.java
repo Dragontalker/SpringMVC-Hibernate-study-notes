@@ -41,8 +41,11 @@ public class MyDemoLoggingAspect {
 		try {
 			result = theProceedingJoinPoint.proceed();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// log the exception
+			myLogger.warning(e.getMessage());
+			
+			// give user a customer message 
+			result = "Major accident! But no worries, your private AOP helicopter is on the way!";	
 		}
 		
 		// get the end time stamp
