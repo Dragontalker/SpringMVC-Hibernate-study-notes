@@ -18,6 +18,11 @@ import com.dragontalker.aopdemo.Account;
 @Order(2)
 public class MyDemoLoggingAspect {
 	
+	
+	public void afterFinallyFindAccountsAdvice(JoinPoint theJoinPoint) {
+		
+	}
+	
 	@AfterThrowing(
 			pointcut = "execution(* com.dragontalker.aopdemo.dao.AccountDAO.findAccounts(..))",
 			throwing = "theExc"
