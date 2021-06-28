@@ -19,7 +19,7 @@ public class MyDemoLoggingAspect {
 	
 	// add a new advice for @AfterReturning on the findAccounts method
 	@AfterReturning(
-			pointcut = "* com.dragontalker.aopdemo.dao.AccountDAO.findAccounts(..)",
+			pointcut = "execution(* com.dragontalker.aopdemo.dao.AccountDAO.findAccounts(..))",
 			returning = "result"
 			)
 	public void afterReturningFindAccountsAdvice(
