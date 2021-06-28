@@ -2,16 +2,17 @@ package com.dragontalker.aopdemo.aspect;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
 public class MyDemoLoggingAspect {
 
-	// this is where we add all of our related advices for logging
+	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.*(..))")
+	private void forDaoPackage() {}
 	
-	// let's start with an @Before advice
-	@Before("execution(* com.dragontalker.aopdemo.dao.*.*(..))")
+	@Before("forDaoPackage")
 	public void beforeAddMethod() {
 		
 		System.out.println("\n>> Excuting @Before advice on any add method!");
