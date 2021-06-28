@@ -11,9 +11,9 @@ public class MyDemoLoggingAspect {
 	// this is where we add all of our related advices for logging
 	
 	// let's start with an @Before advice
-	@Before("execution(public void com.dragontalker.aopdemo.dao.AccountDAO.addAccount())")
-	public void beforeAddAccountAdvice() {
+	@Before("execution(public void add*())")
+	public void beforeAddMethod() {
 		
-		System.out.println("\n>> Excuting @Before advice on addAccount()");
+		System.out.println("\n>> Excuting @Before advice on any add method!");
 	}
 }
