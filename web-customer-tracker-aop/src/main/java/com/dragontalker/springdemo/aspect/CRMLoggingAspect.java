@@ -24,6 +24,9 @@ public class CRMLoggingAspect {
 	@Pointcut("execution(* com.dragontalker.springdemo.dao.*.*.(..))")
 	private void forDaoPackage() {}
 	
+	@Pointcut("forControllerPackage() || forServicePackage() || forDaoPackage()")
+	private void forAppFlow() {}
+	
 	// add @Before advice
 	
 	// add @AfterReturning advice
