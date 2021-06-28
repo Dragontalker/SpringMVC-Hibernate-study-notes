@@ -47,4 +47,10 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 	}
 
+	@Override
+	public Customer getCustomer(int theId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
