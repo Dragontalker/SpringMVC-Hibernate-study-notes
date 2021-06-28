@@ -36,7 +36,7 @@ public class CRMLoggingAspect {
 		
 		// display method we are calling
 		String theMethod = theJoinPoint.getSignature().toShortString();
-		myLogger.info(">> in @Before: calling method: " + theMethod);
+		myLogger.info("\n>> in @Before: calling method: " + theMethod);
 		
 		// display the arguments to the method
 		
@@ -45,17 +45,22 @@ public class CRMLoggingAspect {
 		
 		// loop thru and display args
 		for (Object tempArg : args) {
-			myLogger.info(">> argument: " + tempArg);
+			myLogger.info("\n>> argument: " + tempArg);
 		}
 		
 	}
 	
 	// add @AfterReturning advice
 	@AfterReturning(
-			pointcut = "",
-			returning = ""
+			pointcut = "forAppFlow()",
+			returning = "theResult"
 			)
 	public void afterReturning(JoinPoint theJoinPoint, Object theResult) {
 		
+		// display the method we are returning from
+		String theMethod = theJoinPoint.getSignature().toShortString();
+		myLogger.info("\n>> in @AfterReturning: calling method: " + theMethod);
+		
+		// display data returned
 	}
 }
