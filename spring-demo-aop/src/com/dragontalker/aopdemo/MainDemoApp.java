@@ -3,6 +3,7 @@ package com.dragontalker.aopdemo;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.dragontalker.aopdemo.dao.AccountDAO;
+import com.dragontalker.aopdemo.dao.MembershipDAO;
 
 public class MainDemoApp {
 
@@ -15,6 +16,10 @@ public class MainDemoApp {
 		// get the bean from spring container
 		AccountDAO theAccountDAO = 
 				context.getBean("accountDAO", AccountDAO.class);
+		
+		// get membership bean from spring container
+		MembershipDAO theMembershipDAO = 
+				context.getBean("membershipDAO", MembershipDAO.class);
 		
 		// call the business method
 		theAccountDAO.addAccount();
