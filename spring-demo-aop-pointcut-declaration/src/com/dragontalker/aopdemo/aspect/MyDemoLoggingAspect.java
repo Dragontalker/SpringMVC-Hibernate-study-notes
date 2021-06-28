@@ -12,9 +12,15 @@ public class MyDemoLoggingAspect {
 	@Pointcut("execution(* com.dragontalker.aopdemo.dao.*.*(..))")
 	private void forDaoPackage() {}
 	
-	@Before("forDaoPackage")
+	@Before("forDaoPackage()")
 	public void beforeAddMethod() {
 		
 		System.out.println("\n>> Excuting @Before advice on any add method!");
+	}
+	
+	@Before("forDaoPackage()")
+	public void performApiAnalytics() {
+		
+		System.out.println(">> Performing API analytics");
 	}
 }
