@@ -14,7 +14,7 @@ public class CRMLoggingAspect {
 	private Logger myLogger = Logger.getLogger(getClass().getName());
 	
 	// setup pointcut declarations
-	@Pointcut("")
+	@Pointcut("execution(* com.dragontalker.springdemo.controller.*.*.(..))")
 	private void forControllerPackage() {
 		
 	}
