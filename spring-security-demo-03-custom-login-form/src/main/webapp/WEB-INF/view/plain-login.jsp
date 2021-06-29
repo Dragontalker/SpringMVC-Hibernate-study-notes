@@ -3,11 +3,11 @@
 <html>
 
 	<head>
-		
+		<title>Custom Login Page</title>
 	</head>
 	
 	<body>
-	
+		<h3>My Custom Login Page</h3>
 	</body>
 
 </html>
