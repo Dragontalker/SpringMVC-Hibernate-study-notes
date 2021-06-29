@@ -19,6 +19,14 @@
   </properties>
 
   <dependencies>
+  
+  	<!-- Add support for Hibernate: hihernate-core -->
+  	<dependency>
+	  <groupId>org.hibernate</groupId>
+	  <artifactId>hibernate-core</artifactId>
+	  <version>5.2.11.Final</version>
+	</dependency>
+  	
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
