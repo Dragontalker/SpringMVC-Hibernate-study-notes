@@ -36,7 +36,7 @@
 				<div style="padding-top: 30px" class="panel-body">
 
 					<!-- Login Form -->
-					<form action="" method="POST" class="form-horizontal">
+					<form action="${ pageContext.request.contextPath }/authenticateTheUser" method="POST" class="form-horizontal">
 
 					    <!-- Place for messages: error, alert etc ... -->
 					    <div class="form-group">
