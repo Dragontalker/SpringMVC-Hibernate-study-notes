@@ -26,17 +26,19 @@
 		</dependency>
 		
 		<!-- Spring Security -->
+		<!-- spring-security-web and spring-security-config -->
+		
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-web</artifactId>
-			<version>${springsecurity.version}</version>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-web</artifactId>
+		    <version>${springsecurity.version}</version>
 		</dependency>
 		
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-			<version>${springsecurity.version}</version>
-		</dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-config</artifactId>
+		    <version>${springsecurity.version}</version>
+		</dependency>	
 
 		<!-- Servlet, JSP and JSTL support -->
 		<dependency>
@@ -74,17 +76,18 @@
 	</dependencies>
 
 	<!-- TO DO: Add support for Maven WAR Plugin -->
+
 	<build>
 		<finalName>spring-security-demo</finalName>
-		
+	
 		<pluginManagement>
 			<plugins>
 				<plugin>
 					<!-- Add Maven coordinates (GAV) for: maven-war-plugin -->
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-war-plugin</artifactId>
-					<version>3.2.0</version>
-				</plugin>
+				    <groupId>org.apache.maven.plugins</groupId>
+				    <artifactId>maven-war-plugin</artifactId>
+				    <version>3.2.0</version>					
+				</plugin>						
 			</plugins>
 		</pluginManagement>
 	</build>
