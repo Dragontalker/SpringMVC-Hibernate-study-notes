@@ -43,6 +43,7 @@
 					    <div class="form-group">
 					        <div class="col-xs-15">
 					            <div>
+					            
 					            	<!-- Check for login error -->
 									<c:if test="${ param.error != null }">		            
 										<div class="alert alert-danger col-xs-offset-1 col-xs-10">
