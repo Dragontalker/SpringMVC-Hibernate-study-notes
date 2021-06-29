@@ -7,7 +7,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.User.UserBuilder;
-import org.springframework.util.AntPathMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -30,7 +29,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		http.authorizeRequests()
 			.antMatchers("/").hasRole("EMPLOYEE")
-			.antMatchers("/leaders/**").hasRole("MANAGERS")
+			.antMatchers("/leaders/**").hasRole("MANAGER")
 			.antMatchers("/systems/**").hasRole("ADMIN")
 			.and()
 			.formLogin()
