@@ -1,5 +1,7 @@
 package com.dragontalker.jackson.json.demo;
 
+import java.util.Arrays;
+
 public class Student {
 	
 	private int id;
@@ -57,6 +59,12 @@ public class Student {
 
 	public void setLangugages(String[] langugages) {
 		this.langugages = langugages;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", active=" + active
+				+ ", address=" + address + ", langugages=" + Arrays.toString(langugages) + "]";
 	}
 
 }
