@@ -58,6 +58,9 @@ public class DemoAppConfig {
 		}
 		
 		// log the connection props
+		// just to make sure we are READLLY reading data from properties file
+		logger.info(">>> jdbc.url=" + env.getProperty("jdbc.url"));
+		logger.info(">>> jdbc.user=" + env.getProperty("jdbc.user"));
 		
 		// set database connection props
 		
