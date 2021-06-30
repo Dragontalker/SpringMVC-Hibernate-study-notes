@@ -9,7 +9,7 @@ public class Student {
 	private String lastName;
 	private boolean active;
 	private Address address;
-	private String[] langugages;
+	private String[] languages;
 	
 	public Student() {}
 
@@ -53,18 +53,18 @@ public class Student {
 		this.address = address;
 	}
 
-	public String[] getLangugages() {
-		return langugages;
+	public String[] getLanguages() {
+		return languages;
 	}
 
-	public void setLangugages(String[] langugages) {
-		this.langugages = langugages;
+	public void setLanguages(String[] languages) {
+		this.languages = languages;
 	}
 
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", active=" + active
-				+ ", address=" + address + ", langugages=" + Arrays.toString(langugages) + "]";
+				+ ", address=" + address + ", languages=" + Arrays.toString(languages) + "]";
 	}
 
 }
