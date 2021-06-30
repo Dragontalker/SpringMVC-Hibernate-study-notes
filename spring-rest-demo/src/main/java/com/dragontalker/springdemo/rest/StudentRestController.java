@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
-import javax.xml.ws.Response;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -67,5 +66,13 @@ public class StudentRestController {
 		
 		// return ResponseEntity
 		return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+		
+	}
+	
+	// add another exception handler ... to catch any exception (catch all)
+	@ExceptionHandler
+	public ResponseEntity<StudentErrorResponse> handleException(Exception exception)  {
+		
+		return null;
 	}
 }
