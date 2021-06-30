@@ -28,6 +28,11 @@ public class Driver {
 			System.out.println("> Street = " + tempAddress.getStreet());
 			System.out.println("> City = " + tempAddress.getCity());
 			
+			// print out languages
+			for (String tempLang : theStudent.getLanguages()) {
+				System.out.println("> " + tempLang);
+			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
