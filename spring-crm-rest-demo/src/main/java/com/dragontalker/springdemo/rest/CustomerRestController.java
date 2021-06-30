@@ -32,6 +32,8 @@ public class CustomerRestController {
 		
 		Customer theCustomer = customerService.getCustomer(customerId);
 		
+		
+		
 		return theCustomer;
 	}
 	
