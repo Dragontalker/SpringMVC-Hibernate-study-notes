@@ -1,5 +1,7 @@
 package com.dragontalker.springsecurity.demo.config;
 
+import java.util.logging.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -19,6 +21,9 @@ public class DemoAppConfig {
 	// set up variable to hold the properties
 	@Autowired
 	private Environment env;
+	
+	// set up a logger for diagnostics
+	private Logger logger = Logger.getLogger(getClass().getName());
 
 	// define a bean for ViewResolver
 	@Bean
