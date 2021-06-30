@@ -6,6 +6,13 @@ public class Driver {
 		
 		try {
 			
+			// create object mapper
+			
+			// read JSON file and map.convert to Java POJO: 
+			// data/sample-lite.json
+			
+			// print first name and last name
+			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
