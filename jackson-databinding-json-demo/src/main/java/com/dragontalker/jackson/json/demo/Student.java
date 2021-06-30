@@ -7,6 +7,7 @@ public class Student {
 	private String lastName;
 	private boolean active;
 	private Address address;
+	private String[] langugages;
 	
 	public Student() {}
 
@@ -48,6 +49,14 @@ public class Student {
 
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+
+	public String[] getLangugages() {
+		return langugages;
+	}
+
+	public void setLangugages(String[] langugages) {
+		this.langugages = langugages;
 	}
 
 }
