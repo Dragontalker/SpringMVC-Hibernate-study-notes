@@ -72,6 +72,18 @@ public class DemoAppConfig {
 		return securityDataSource;
 	}
 	
+	// need a helper method
+	// read environment property and convert to int
+	private int getIntProperty(String propName) {
+		
+		String propVal = env.getProperty(propName);
+		
+		// now convert to int
+		int intPropVal = Integer.parseInt(propVal);
+		
+		return intPropVal;
+	}
+	
 }
 
 
