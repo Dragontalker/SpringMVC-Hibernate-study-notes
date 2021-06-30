@@ -21,8 +21,7 @@ public class CustomerRestExceptionHandler {
 						System.currentTimeMillis());
 		
 		// return ResponseEntity
-		
-		return null;
+		return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
 	}
 	
 	// Add another exception handler ... to catch any exception (catch all)
