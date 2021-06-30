@@ -20,7 +20,7 @@ public class Driver {
 			
 			// print first name and last name
 			System.out.println(">> First name = " + theStudent.getFirstName());
-			System.out.println(">> Last name = " + theStudent.getFirstName());
+			System.out.println(">> Last name = " + theStudent.getLastName());
 			
 		} catch (Exception e) {
 			e.printStackTrace();
