@@ -2,6 +2,8 @@ package com.dragontalker.springsecurity.demo.config;
 
 import java.util.logging.Logger;
 
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -35,6 +37,13 @@ public class DemoAppConfig {
 		viewResolver.setSuffix(".jsp");
 		
 		return viewResolver;
+	}
+	
+	// define a bean for our security data source
+	@Bean
+	public DataSource securityDataSource() {
+		
+		return null;
 	}
 	
 }
