@@ -1,5 +1,6 @@
 package com.dragontalker.springdemo.rest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,12 @@ public class StudentRestController {
 	@GetMapping("/students")
 	public List<Student> getStudents() {
 		
-		return null;
+		List<Student> theStudents = new ArrayList<>();
+		
+		theStudents.add(new Student("Poornima", "Patel"));
+		theStudents.add(new Student("Maria", "Rossi"));
+		theStudents.add(new Student("Mary", "Smith"));
+		
+		return theStudents;
 	}
 }
