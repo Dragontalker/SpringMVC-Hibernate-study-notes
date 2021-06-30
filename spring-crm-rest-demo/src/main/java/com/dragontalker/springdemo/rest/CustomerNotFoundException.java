@@ -2,6 +2,8 @@ package com.dragontalker.springdemo.rest;
 
 public class CustomerNotFoundException extends RuntimeException {
 
+	private static final long serialVersionUID = 8495836124142788745L;
+
 	public CustomerNotFoundException() {}
 
 	public CustomerNotFoundException(String message) {
