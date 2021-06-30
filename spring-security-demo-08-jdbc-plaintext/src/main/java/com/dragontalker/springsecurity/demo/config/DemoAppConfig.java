@@ -1,5 +1,6 @@
 package com.dragontalker.springsecurity.demo.config;
 
+import java.beans.PropertyVetoException;
 import java.util.logging.Logger;
 
 import javax.sql.DataSource;
@@ -50,6 +51,11 @@ public class DemoAppConfig {
 				new ComboPooledDataSource();
 		
 		// set the jdbc driver class
+		try {
+			securityDataSource.setDriverClass(env.getProperty("jdbc.driver"));
+		} catch (PropertyVetoException exc) {
+			throw new RuntimeException(exc);
+		}
 		
 		// log the connection props
 		
