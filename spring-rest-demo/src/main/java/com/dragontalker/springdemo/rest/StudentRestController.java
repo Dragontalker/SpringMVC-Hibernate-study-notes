@@ -40,6 +40,8 @@ public class StudentRestController {
 	@GetMapping("/students/{studentId}")
 	public Student getStudent(@PathVariable int studentId) {
 		
-		return null;
+		// just index into the list ... keep it simple for now
+		
+		return theStudents.get(studentId);
 	}
 }
