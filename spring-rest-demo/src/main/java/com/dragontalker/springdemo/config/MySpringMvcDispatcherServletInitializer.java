@@ -18,8 +18,8 @@ public class MySpringMvcDispatcherServletInitializer extends AbstractAnnotationC
 
 	@Override
 	protected String[] getServletMappings() {
-		// TODO Auto-generated method stub
-		return null;
+
+		return new String[] { "/" };
 	}
 
 }
