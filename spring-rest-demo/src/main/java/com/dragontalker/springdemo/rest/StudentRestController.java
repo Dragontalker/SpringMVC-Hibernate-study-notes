@@ -77,7 +77,7 @@ public class StudentRestController {
 		StudentErrorResponse error = new StudentErrorResponse();
 		
 		error.setStatus(HttpStatus.BAD_REQUEST.value());
-		error.setMessage(exception.getMessage());
+		error.setMessage("Ops! Your request is not valid!");
 		error.setTimeStamp(System.currentTimeMillis());
 		
 		// return ResponseEntity
