@@ -14,6 +14,8 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages="com.dragontalker.springsecurity.demo")
@@ -44,6 +46,8 @@ public class DemoAppConfig {
 	public DataSource securityDataSource() {
 		
 		// create connection pool
+		ComboPooledDataSource securityDataSource = 
+				new ComboPooledDataSource();
 		
 		// set the jdbc driver class
 		
@@ -51,7 +55,7 @@ public class DemoAppConfig {
 		
 		// set database connection props
 		
-		return null;
+		return securityDataSource;
 	}
 	
 }
