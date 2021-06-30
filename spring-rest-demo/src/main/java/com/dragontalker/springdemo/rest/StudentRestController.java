@@ -21,18 +21,17 @@ public class StudentRestController {
 	@PostConstruct
 	public void loadData() {
 		
+		theStudents = new ArrayList<>();
+		
+		theStudents.add(new Student("Poornima", "Patel"));
+		theStudents.add(new Student("Maria", "Rossi"));
+		theStudents.add(new Student("Mary", "Smith"));
 	}
 
 	// define end point for "/student" - return list of students
 	@GetMapping("/students")
 	public List<Student> getStudents() {
-		
-		List<Student> theStudents = new ArrayList<>();
-		
-		theStudents.add(new Student("Poornima", "Patel"));
-		theStudents.add(new Student("Maria", "Rossi"));
-		theStudents.add(new Student("Mary", "Smith"));
-		
+
 		return theStudents;
 	}
 }
