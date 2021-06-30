@@ -43,6 +43,14 @@ public class DemoAppConfig {
 	@Bean
 	public DataSource securityDataSource() {
 		
+		// create connection pool
+		
+		// set the jdbc driver class
+		
+		// log the connection props
+		
+		// set database connection props
+		
 		return null;
 	}
 	
