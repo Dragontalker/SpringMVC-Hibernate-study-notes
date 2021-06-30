@@ -63,6 +63,11 @@ public class DemoAppConfig {
 		logger.info(">>> jdbc.user=" + env.getProperty("jdbc.user"));
 		
 		// set database connection props
+		securityDataSource.setJdbcUrl(env.getProperty("jdbc.url"));
+		securityDataSource.setUser(env.getProperty("jdbc.user"));
+		securityDataSource.setPassword(env.getProperty("jdbc.password"));
+		
+		// set connection pool props
 		
 		return securityDataSource;
 	}
