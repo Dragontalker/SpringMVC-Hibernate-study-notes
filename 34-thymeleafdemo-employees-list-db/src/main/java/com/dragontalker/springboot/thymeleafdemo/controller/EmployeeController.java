@@ -1,9 +1,6 @@
 package com.dragontalker.springboot.thymeleafdemo.controller;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import javax.annotation.PostConstruct;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,6 +25,8 @@ public class EmployeeController {
 	// add mapping for "/list"
 	@GetMapping("/list")
 	public String listEmployees(Model theModel) {
+		
+		List<Employee> theEmployees = employeeService.findAll();
 		
 		// add to the spring model
 		theModel.addAttribute("employees", theEmployees);
