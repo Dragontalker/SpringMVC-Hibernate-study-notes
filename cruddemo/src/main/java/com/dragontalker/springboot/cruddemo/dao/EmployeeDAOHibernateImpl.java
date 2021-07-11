@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,6 +28,7 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 	public List<Employee> findAll() {
 		
 		// get the current Hibernate session
+		Session currentSession = entityManager.unwrap(Session.class);
 		
 		// create a query
 		
