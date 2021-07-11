@@ -23,7 +23,15 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 	
 	@Override
 	public List<Employee> findAll() {
-		// TODO Auto-generated method stub
+		
+		// get the current Hibernate session
+		
+		// create a query
+		
+		// execute query and get result list
+		
+		// return the results
+		
 		return null;
 	}
 
