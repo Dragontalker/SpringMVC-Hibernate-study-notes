@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -31,12 +32,14 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 		Session currentSession = entityManager.unwrap(Session.class);
 		
 		// create a query
+		Query<Employee> theQuery = 
+				currentSession.createQuery("from Employee", Employee.class);
 		
 		// execute query and get result list
+		List<Employee> employees = theQuery.getResultList();
 		
 		// return the results
-		
-		return null;
+		return employees;
 	}
 
 }
