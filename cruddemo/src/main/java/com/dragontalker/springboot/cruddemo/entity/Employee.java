@@ -9,6 +9,14 @@ public class Employee {
 
 	// define fields
 	
+	private int id;
+	
+	private String firstName;
+	
+	private String lastName;
+	
+	private String email;
+	
 	// define constructors
 	
 	// define getter/setter
