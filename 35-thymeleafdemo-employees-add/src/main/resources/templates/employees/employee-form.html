@@ -25,7 +25,7 @@
 		<p class="h4 mb-4">Save Employee</p>
 		
 		<form action="#" th:action="@{/employees/save}"
-						 th:object="@{employee}" method="POST">
+						 th:object="${employee}" method="POST">
 						 
 	 		<input type="text" th:field="*{firstName}"
 	 			   class="form-control mb-4 col-4" placeholder="First name">
@@ -38,6 +38,9 @@
 	 			   
  			<button type="submit" class="btn btn-info col-2">Save</button>
 	 	</form>
+	 	
+	 	<hr>
+	 	<a href="@{/employees/list}">Back to Employees List</a>
 	
 	</div>
 
