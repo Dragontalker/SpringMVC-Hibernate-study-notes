@@ -1,34 +1,35 @@
 <!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Employee Directory</title>
+</head>
+
+<body>
+
+	<h3>Employee Directory</h3>
+	<hr>
 	
-	<head>
-		<title>Employee Directory</title>
-	</head>
-
-	<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
 		
-		<h3>Employee Directory</h3>
-		<hr>
-		
-		<table border="1">
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email</th>
-				</tr>
-			</thead>
+		<tbody>
+			<tr th:each="tempEmployee : ${employees}">
 			
-			<tbody>
-				<tr th:each="temEmployee : ${employees}">
-					
-					<td th:text="${tempEmployee.firstName}" />
-					<td th:text="${tempEmployee.lastName}" />
-					<td th:text="${tempEmployee.email}" />
-					
-				</tr>
-			</tbody>
-		</table>
-	</body>
+				<td th:text="${tempEmployee.firstName}" />	
+				<td th:text="${tempEmployee.lastName}" />	
+				<td th:text="${tempEmployee.email}" />	
+				
+			</tr>
+		</tbody>		
+	</table>
+	
+	
+</body>
 </html>
