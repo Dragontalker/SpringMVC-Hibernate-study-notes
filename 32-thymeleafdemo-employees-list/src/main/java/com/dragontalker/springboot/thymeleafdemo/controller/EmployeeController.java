@@ -7,4 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/employees")
 public class EmployeeController {
 
+	// load employee data
+	
+	// add mapping for "/list"
+	
 }
