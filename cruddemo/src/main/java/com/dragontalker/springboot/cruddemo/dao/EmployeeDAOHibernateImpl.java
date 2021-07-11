@@ -56,7 +56,12 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
 	@Override
 	public void save(Employee theEmployee) {
-		// TODO Auto-generated method stub
+		
+		// get the current hibernate session
+		Session currentSession = entityManager.unwrap(Session.class);
+		
+		// save employee
+		currentSession.saveOrUpdate(theEmployee);
 		
 	}
 
