@@ -18,10 +18,13 @@ public class Employee {
 	@Column(name = "id")
 	private int id;
 	
+	@Column(name = "firstName")
 	private String firstName;
 	
+	@Column(name = "lasttName")
 	private String lastName;
 	
+	@Column(name = "email")
 	private String email;
 	
 	// define constructors
