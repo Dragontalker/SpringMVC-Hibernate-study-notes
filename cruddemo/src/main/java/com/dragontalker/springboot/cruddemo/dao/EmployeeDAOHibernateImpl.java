@@ -42,4 +42,22 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 		return employees;
 	}
 
+	@Override
+	public Employee findById(int theId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void save(Employee theEmployee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteById(int theId) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
