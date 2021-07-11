@@ -46,12 +46,14 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 	public Employee findById(int theId) {
 		
 		// get the current hibernate session
+		Session currentSession = entityManager.unwrap(Session.class);
 		
 		// get the employee
+		Employee theEmployee = 
+				currentSession.get(Employee.class, theId);
 		
 		// return the employee
-		
-		return null;
+		return theEmployee;
 	}
 
 	@Override
