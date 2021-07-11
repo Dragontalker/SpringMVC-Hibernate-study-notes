@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.dragontalker.springboot.thymeleafdemo.entity.Employee;
+import com.dragontalker.springboot.thymeleafdemo.service.EmployeeService;
 
 
 
@@ -18,6 +19,11 @@ import com.dragontalker.springboot.thymeleafdemo.entity.Employee;
 @RequestMapping("/employees")
 public class EmployeeController {
 
+	private EmployeeService employeeService;
+	
+	public EmployeeController(EmployeeService theEmployeeService) {
+		employeeService = theEmployeeService;
+	}
 	
 	// add mapping for "/list"
 	@GetMapping("/list")
