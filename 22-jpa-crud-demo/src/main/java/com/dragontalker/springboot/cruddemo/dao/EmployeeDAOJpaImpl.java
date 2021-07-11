@@ -28,10 +28,10 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO {
 				entityManager.createQuery("from Employee");
 		
 		// execute query and get result list
+		List<Employee> employees = theQuery.getResultList();
 		
 		// return the results
-		
-		return null;
+		return employees;
 	}
 
 	@Override
