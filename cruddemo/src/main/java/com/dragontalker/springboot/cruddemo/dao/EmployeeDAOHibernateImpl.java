@@ -44,7 +44,13 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
 	@Override
 	public Employee findById(int theId) {
-		// TODO Auto-generated method stub
+		
+		// get the current hibernate session
+		
+		// get the employee
+		
+		// return the employee
+		
 		return null;
 	}
 
