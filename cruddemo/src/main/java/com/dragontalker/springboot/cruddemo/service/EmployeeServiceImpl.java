@@ -22,29 +22,25 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	@Transactional
 	public List<Employee> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return employeeDAO.findAll();
 	}
 
 	@Override
 	@Transactional
 	public Employee findById(int theId) {
-		// TODO Auto-generated method stub
-		return null;
+		return employeeDAO.findById(theId);
 	}
 
 	@Override
 	@Transactional
 	public void save(Employee theEmployee) {
-		// TODO Auto-generated method stub
-
+		employeeDAO.save(theEmployee);
 	}
 
 	@Override
 	@Transactional
 	public void deleteById(int theId) {
-		// TODO Auto-generated method stub
-
+		employeeDAO.deleteById(theId);
 	}
 
 }
