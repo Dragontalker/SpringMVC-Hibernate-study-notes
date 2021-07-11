@@ -67,7 +67,10 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
 	@Override
 	public void deleteById(int theId) {
-		// TODO Auto-generated method stub
+		
+		// get the current hibernate session
+		
+		// delete object with primary key
 		
 	}
 
