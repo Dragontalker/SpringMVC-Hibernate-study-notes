@@ -27,18 +27,21 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
+	@Transactional
 	public Employee findById(int theId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
+	@Transactional
 	public void save(Employee theEmployee) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
+	@Transactional
 	public void deleteById(int theId) {
 		// TODO Auto-generated method stub
 
