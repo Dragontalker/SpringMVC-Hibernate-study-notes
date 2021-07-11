@@ -21,6 +21,10 @@ public class EmployeeController {
 	private void loadData() {
 		
 		// create employees
+		Employee emp1 = new Employee(1, "Leslie", "Andrews", "leslie@luv2code.com");
+		Employee emp2 = new Employee(2, "Emma", "Baugarten", "emma@luv2code.com");
+		Employee emp3 = new Employee(3, "Avani", "Gupta", "avani@luv2code.com");
+
 		
 		// create the list
 		
