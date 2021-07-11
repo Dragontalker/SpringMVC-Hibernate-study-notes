@@ -3,6 +3,7 @@ package com.dragontalker.springboot.cruddemo.dao;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -23,6 +24,8 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO {
 	public List<Employee> findAll() {
 		
 		// create a query
+		Query theQuery = 
+				entityManager.createQuery("from Employee");
 		
 		// execute query and get result list
 		
