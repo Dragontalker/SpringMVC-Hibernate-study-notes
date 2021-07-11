@@ -21,7 +21,13 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO {
 
 	@Override
 	public List<Employee> findAll() {
-		// TODO Auto-generated method stub
+		
+		// create a query
+		
+		// execute query and get result list
+		
+		// return the results
+		
 		return null;
 	}
 
