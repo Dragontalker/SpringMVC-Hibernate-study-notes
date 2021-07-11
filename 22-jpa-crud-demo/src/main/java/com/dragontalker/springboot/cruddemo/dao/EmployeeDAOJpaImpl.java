@@ -24,8 +24,7 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO {
 	public List<Employee> findAll() {
 		
 		// create a query
-		Query theQuery = 
-				entityManager.createQuery("from Employee");
+		Query theQuery = entityManager.createQuery("from Employee");
 		
 		// execute query and get result list
 		List<Employee> employees = theQuery.getResultList();
@@ -36,8 +35,12 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO {
 
 	@Override
 	public Employee findById(int theId) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		// get employee
+		Employee theEmployee = entityManager.find(Employee.class, theId);
+		
+		// return employee
+		return theEmployee;
 	}
 
 	@Override
