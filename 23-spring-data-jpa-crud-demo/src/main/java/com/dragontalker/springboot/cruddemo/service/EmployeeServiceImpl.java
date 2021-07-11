@@ -8,40 +8,37 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.dragontalker.springboot.cruddemo.dao.EmployeeDAO;
+import com.dragontalker.springboot.cruddemo.dao.EmployeeRepository;
 import com.dragontalker.springboot.cruddemo.entity.Employee;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 	
-	private EmployeeDAO employeeDAO;
+	private EmployeeRepository employeeRepository;
 	
 	@Autowired
-	public EmployeeServiceImpl(@Qualifier("employeeDAOJpaImpl") EmployeeDAO theEmployeeDAO) {
-		employeeDAO = theEmployeeDAO;
+	public EmployeeServiceImpl(EmployeeRepository theEmployeeRepository) {
+		employeeRepository = theEmployeeRepository;
 	}
 
 	@Override
-	@Transactional
 	public List<Employee> findAll() {
-		return employeeDAO.findAll();
+		return employeeRepository.findAll();
 	}
 
 	@Override
-	@Transactional
 	public Employee findById(int theId) {
-		return employeeDAO.findById(theId);
+		return employeeRepository.findAllById(theId);
 	}
 
 	@Override
-	@Transactional
 	public void save(Employee theEmployee) {
-		employeeDAO.save(theEmployee);
+		employeeRepository.save(theEmployee);
 	}
 
 	@Override
-	@Transactional
 	public void deleteById(int theId) {
-		employeeDAO.deleteById(theId);
+		employeeRepository.deleteById(theId);
 	}
 
 }
