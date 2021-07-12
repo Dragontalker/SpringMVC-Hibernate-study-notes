@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.dragontalker.springboot.thymeleafdemo.entity.Employee;
 import com.dragontalker.springboot.thymeleafdemo.service.EmployeeService;
@@ -45,6 +46,18 @@ public class EmployeeController {
 		theModel.addAttribute("employee", theEmployee);
 		
 		return "employees/employee-form";
+
+	}
+	
+	@GetMapping("/showFormForUpdate")
+	public String showFormForUpdate(@RequestParam("employeeId") int theId, Model theModel) {
+		
+		// get the emplolyee from the service
+		
+		// set employee as a model attribute to pre-populate the form
+		
+		// send over to our form
+		return "employees/employee-form";
 	}
 	
 	@PostMapping("/save")
@@ -56,4 +69,6 @@ public class EmployeeController {
 		// use a redirect to prevent duplicate submission
 		return "redirect:/employees/list";
 	}
+	
+	
 }
